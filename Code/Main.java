@@ -6,6 +6,9 @@ public class Main {
     
     public static void main(String[] args) {
 
+        CharacterAttributes attributes = new CharacterAttributes();
+        CharacterDisplay display = new CharacterDisplay();
+
         Dimension userScreenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
         int userScreenWidth = userScreenSize.width;
@@ -20,6 +23,9 @@ public class Main {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setLayout(null);
+
+        CharacterMovement movement = new CharacterMovement(frame, display, attributes);
+        display.characterDisplay(frame, movement);
 
         frame.setVisible(true);
     }
