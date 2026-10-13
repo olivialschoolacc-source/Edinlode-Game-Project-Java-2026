@@ -37,7 +37,7 @@ public class DashLogic {
         cooldown = Math.max(0, cooldown);
     }
 
-    private void triggerDashInput() {
+    public void triggerDashInput() {
 
         useDash();
     }

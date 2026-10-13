@@ -14,6 +14,7 @@ public class HealthOrb {
 
         private CharacterAttributes stats;
         private double wavePhase = 0;
+        private double displayHealthPercent = -1.0;
 
         public HealthOrbClass(CharacterAttributes stats) {
 
@@ -44,19 +45,48 @@ public class HealthOrb {
 
             double healthPercent = stats.charCurrHP / stats.charMaxHP;
             if (healthPercent < 0) healthPercent = 0;
+            if (healthPercent > 1) healthPercent = 1;
 
-            int fluidTopY = height - (int) (healthPercent * height);
-
-            Polygon liquidWaveShape = new Polygon();
-
-            for (int x = 0; x <= width; x++) {
-                int waveOffsetY = (int) (Math.sin(x * 0.08 + wavePhase) * 3.5);
-
-                if (healthPercent <= 0.05 || healthPercent >= 0.95) waveOffsetY = 0;
-
-                liquidWaveShape.addPoint(x, fluidTopY + waveOffsetY);
+            if (displayHealthPercent < 0) {
+                displayHealthPercent = healthPercent;
             }
 
+            if (displayHealthPercent > healthPercent) {
+                displayHealthPercent -= 0.025;
+                if (displayHealthPercent < healthPercent) {
+                    displayHealthPercent = healthPercent;
+                }
+            } else if (displayHealthPercent < healthPercent) {
+                displayHealthPercent = healthPercent;
+            }
+
+            int trailTopY = height - (int) (displayHealthPercent * height);
+            Polygon trailWaveShape = new Polygon();
+            for (int x = 0; x <= width; x++) {
+                int waveOffsetY = (int) (Math.sin(x * 0.08 + wavePhase) * 3.5);
+                if (displayHealthPercent <= 0.05 || displayHealthPercent >= 0.95) waveOffsetY = 0;
+                trailWaveShape.addPoint(x, trailTopY + waveOffsetY);
+            }
+            trailWaveShape.addPoint(width, height);
+            trailWaveShape.addPoint(0, height);
+
+            Area trailClipArea = new Area(sphereBounds);
+            trailClipArea.intersect(new Area(trailWaveShape));
+
+            GradientPaint trailGradient = new GradientPaint(
+                0, trailTopY - 5, new Color(255, 140, 0),
+                0, height, new Color(120, 50, 0)
+            );
+            g2d.setPaint(trailGradient);
+            g2d.fill(trailClipArea);
+
+            int fluidTopY = height - (int) (healthPercent * height);
+            Polygon liquidWaveShape = new Polygon();
+            for (int x = 0; x <= width; x++) {
+                int waveOffsetY = (int) (Math.sin(x * 0.08 + wavePhase) * 3.5);
+                if (healthPercent <= 0.05 || healthPercent >= 0.95) waveOffsetY = 0;
+                liquidWaveShape.addPoint(x, fluidTopY + waveOffsetY);
+            }
             liquidWaveShape.addPoint(width, height);
             liquidWaveShape.addPoint(0, height);
 

@@ -8,6 +8,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+import Code.UICode.DashLogic;
+
 public class CharacterMovement {
     
     // Direction
@@ -15,8 +17,8 @@ public class CharacterMovement {
     public int activeDirection = 0; // -1 Left, 1 Right, 0 None (Neutral)
 
     // Position
-    public double startPosX = 100, startPosY = 200;
-    public double currPosX = 100, currPosY = 200;
+    public double startPosX = 100, startPosY = 800;
+    public double currPosX = 100, currPosY = 800;
 
     // Velocity (Speed)
     public double velX = 0.0, velY = 0.0;
@@ -36,18 +38,27 @@ public class CharacterMovement {
     private boolean isShiftPressed = false;
     
     // Other
-    public CharacterDisplay stats;
-    public CharacterAttributes charAttStats;
+    private CharacterDisplay stats;
+    private CharacterAttributes charAttStats;
+    private DashLogic dashLogic;
+    public Damage damageSystem;
+
+    private JFrame frame;
     
     public CharacterMovement(JFrame frame, CharacterDisplay stats, CharacterAttributes charAttStats) {
 
+        this.frame = frame;
         this.stats = stats;
         this.charAttStats = charAttStats;
 
         setupKeyboardInput(frame);
 
-        Timer gameloop = new Timer(16, e -> updateFrame());
+        Timer gameloop = new Timer(16, e -> updateFieldAndCollision());
         gameloop.start();
+    }
+
+    public void setDashLogic(DashLogic dashLogic) {
+        this.dashLogic = dashLogic;
     }
 
     private void setupKeyboardInput(JFrame frame) {
@@ -60,6 +71,14 @@ public class CharacterMovement {
 
             if (e.getID() == KeyEvent.KEY_PRESSED) {
                 switch (e.getKeyCode()) {
+                    case KeyEvent.VK_SHIFT:
+                        if (!isShiftPressed) {
+                            isShiftPressed = true;
+                            if (dashLogic != null) {
+                                dashLogic.triggerDashInput();
+                            }
+                        }
+                        break;
                     case KeyEvent.VK_SPACE:
                         isSpacePressed = true;
                         break;
@@ -76,6 +95,9 @@ public class CharacterMovement {
                 }
             } else if (e.getID() == KeyEvent.KEY_RELEASED) {
                 switch (e.getKeyCode()) {
+                    case KeyEvent.VK_SHIFT:
+                        isShiftPressed = false;
+                        break;
                     case KeyEvent.VK_SPACE:
                         isSpacePressed = false;
                         break;
@@ -158,8 +180,8 @@ public class CharacterMovement {
         currPosX += velX;
         currPosY += velY;
 
-        if (currPosY >= 400) {
-            currPosY = 400;
+        if (currPosY >= 800) {
+            currPosY = 800;
             velY = 0;
             isGrounded = true;
         } else {
@@ -167,6 +189,22 @@ public class CharacterMovement {
         }
 
         stats.character.setLocation((int)currPosX, (int)currPosY);
+
+        if (frame != null) {
+            frame.repaint();
+        }
+    }
+
+    public void updateFieldAndCollision() {
+        updateFrame();
+
+        if (damageSystem != null) {
+            damageSystem.checkCollision();
+        }
+    }
+
+    public void setDamageSystem(Damage damageSystem) {
+        this.damageSystem = damageSystem;
     }
 
     public void startDash(int direction) {

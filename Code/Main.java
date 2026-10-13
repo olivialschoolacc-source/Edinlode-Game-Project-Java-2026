@@ -2,6 +2,8 @@ package Code;
 import java.awt.*;
 import javax.swing.*;
 
+import Code.UICode.DashLogic;
+
 public class Main {
     
     public static void main(String[] args) {
@@ -30,6 +32,11 @@ public class Main {
 
         UIDisplay UIdisplay = new UIDisplay(frame, attributes, movement);
 
+        Damage damage = new Damage(frame, movement, display, attributes);
+        movement.setDamageSystem(damage);
+
         frame.setVisible(true);
+
+        frame.repaint();
     }
 }

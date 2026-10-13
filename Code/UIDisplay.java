@@ -90,6 +90,7 @@ public class UIDisplay {
         this.statsPotionLogic = new PotionLogic(potion, stats, potionQtyLabel, frame);
         potionQtyLabel.setText(String.valueOf(statsPotionLogic.potionVal));
         this.statsDashLogic = new DashLogic(dash, stats, dashQtyLabel, frame, character);
+        character.setDashLogic(statsDashLogic);
         dashQtyLabel.setText(String.valueOf(statsDashLogic.dashVal));
 
         potionQtyLabel.setBounds(potionPosX + (miniOrbSize / 3), potionPosY + (miniOrbSize / 4), miniOrbSize / 2, miniOrbSize / 2);
