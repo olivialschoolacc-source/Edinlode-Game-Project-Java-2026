@@ -14,6 +14,9 @@ public class CharacterAttributes {
 
     public double cdReduction = 0;
 
+    public int maxDashVal = 1;
+    public int maxPotionVal = 5;
+
     public CharacterAttributes() {
 
     }

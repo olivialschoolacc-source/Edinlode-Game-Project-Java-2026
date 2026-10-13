@@ -23,9 +23,12 @@ public class Main {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setLayout(null);
+        frame.getContentPane().setBackground(new Color(150, 150, 150));
 
         CharacterMovement movement = new CharacterMovement(frame, display, attributes);
         display.characterDisplay(frame, movement);
+
+        UIDisplay UIdisplay = new UIDisplay(frame, attributes, movement);
 
         frame.setVisible(true);
     }
