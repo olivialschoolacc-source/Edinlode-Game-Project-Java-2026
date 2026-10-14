@@ -5,7 +5,7 @@ public class CharacterAttributes {
     public double maxSpd = 10.0;
 
     public double charMaxHP = 100;
-    public double charCurrHP = 100;
+    public double charCurrHP = 10;
 
     public double charMaxMana = 100;
     public double charCurrMana = 100;

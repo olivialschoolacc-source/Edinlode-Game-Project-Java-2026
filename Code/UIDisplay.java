@@ -99,6 +99,19 @@ public class UIDisplay {
         frame.add(potionQtyLabel);
         frame.add(dashQtyLabel);
 
+        frame.addKeyListener(new KeyAdapter() {
+            @Override 
+            public void keyPressed(KeyEvent e) {
+                statsPotionLogic.keyPressed(e);
+                frame.repaint();
+            }
+            @Override
+            public void keyReleased(KeyEvent e) {
+                statsPotionLogic.keyReleased(e);
+                frame.repaint();
+            }
+        });
+
         for (JComponent component : uiElements) {
             frame.add(component);
         }

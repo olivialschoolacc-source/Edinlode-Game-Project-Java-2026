@@ -15,6 +15,9 @@ public class HealthOrb {
         private CharacterAttributes stats;
         private double wavePhase = 0;
         private double displayHealthPercent = -1.0;
+        private double previousHealthPercent = -1.0;   
+        private double healDisplayPercent = -1.0;
+        private double healTargetPercent = -1.0;
 
         public HealthOrbClass(CharacterAttributes stats) {
 
@@ -44,21 +47,47 @@ public class HealthOrb {
             g2d.fill(sphereBounds);
 
             double healthPercent = stats.charCurrHP / stats.charMaxHP;
-            if (healthPercent < 0) healthPercent = 0;
-            if (healthPercent > 1) healthPercent = 1;
 
-            if (displayHealthPercent < 0) {
+            healthPercent = Math.max(0, Math.min(1, healthPercent));
+
+            if (previousHealthPercent < 0) {
+                previousHealthPercent = healthPercent;
                 displayHealthPercent = healthPercent;
+                healDisplayPercent = healthPercent;
+                healTargetPercent = healthPercent;
+            }
+
+            if (healthPercent < previousHealthPercent) {
+                displayHealthPercent = Math.max(
+                    displayHealthPercent, previousHealthPercent
+                );
+
+                healDisplayPercent = healthPercent;
+                healTargetPercent = healthPercent;
+            }
+
+            if (healthPercent > previousHealthPercent) {
+                healDisplayPercent = previousHealthPercent;
+                healTargetPercent = healthPercent;
             }
 
             if (displayHealthPercent > healthPercent) {
-                displayHealthPercent -= 0.025;
+                displayHealthPercent -= 0.015;
+
                 if (displayHealthPercent < healthPercent) {
                     displayHealthPercent = healthPercent;
                 }
-            } else if (displayHealthPercent < healthPercent) {
-                displayHealthPercent = healthPercent;
             }
+
+            if (healDisplayPercent < healTargetPercent) {
+                healDisplayPercent += 0.015;
+
+                if (healDisplayPercent >= healTargetPercent) {
+                    healDisplayPercent = healTargetPercent;
+                }
+            }
+
+            previousHealthPercent = healthPercent;
 
             int trailTopY = height - (int) (displayHealthPercent * height);
             Polygon trailWaveShape = new Polygon();
@@ -99,6 +128,38 @@ public class HealthOrb {
             );
             g2d.setPaint(liquidGradient);
             g2d.fill(fluidClipArea);
+
+            int healTopY = height - (int) (healDisplayPercent * height);
+            int healBottomY = height - (int) (healTargetPercent * height);
+
+            Polygon healWaveShape = new Polygon();
+
+            for (int x = 0; x <= width; x++) {
+                int waveOffsetY = (int) (
+                    Math.sin(x * 0.08 + wavePhase) * 3.5
+                );
+
+                healWaveShape.addPoint(x, healTopY + waveOffsetY);
+            }
+
+            for (int x = width; x >= 0; x--) {
+                int waveOffsetY = (int) (
+                    Math.sin(x * 0.08 + wavePhase) * 3.5
+                );
+
+                healWaveShape.addPoint(x, healBottomY + waveOffsetY);
+            }
+
+            Area healClipArea = new Area(sphereBounds);
+            healClipArea.intersect(new Area(healWaveShape));
+
+            GradientPaint healGradient = new GradientPaint(
+                0, healTopY - 5, new Color(140, 0, 0),
+                0, healBottomY, new Color(50, 0, 0)
+            );
+
+            g2d.setPaint(healGradient);
+            g2d.fill(healClipArea);
 
             g2d.setStroke(new BasicStroke(3.0f));
             g2d.setColor(new Color(110, 95, 75));
