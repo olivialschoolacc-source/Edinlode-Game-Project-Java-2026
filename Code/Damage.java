@@ -59,6 +59,10 @@ public class Damage {
         long currTime = System.currentTimeMillis();
 
         if (currTime - lastAttackTime >= attackCooldownMs) {
+            if (stats.isUntargetable) {
+                return;
+            }
+            
             if (random.nextInt(100) < crtChance * 100) {
                 stats.charCurrHP -= enemyDmg * crtDmg;
                 lastAttackTime = currTime;

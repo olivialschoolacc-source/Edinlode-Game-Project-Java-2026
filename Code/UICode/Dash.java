@@ -4,21 +4,27 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
 
+import Code.CharacterAttributes;
+
 public class Dash {
 
     public static class DashClass extends JComponent {
 
         private float cooldownProgress = 0f;
         private Timer cooldownTimer;
+
+        private CharacterAttributes stats;
     
-        public DashClass() {
+        public DashClass(CharacterAttributes stats) {
             setOpaque(false);
+            this.stats = stats;
         }
 
         public void startCooldown(int durationMs) {
         
             if (cooldownTimer != null && cooldownTimer.isRunning()) {
                 cooldownTimer.stop();
+                stats.isUntargetable = false;
             }
 
             cooldownProgress = 1f;
@@ -32,14 +38,17 @@ public class Dash {
                     1f - (float) elapsed / durationMs
                 );
 
+                stats.isUntargetable = false;
                 repaint();
 
                 if (cooldownProgress <= 0f) {
                     cooldownTimer.stop();
+                    stats.isUntargetable = false;
                 }
             });
 
             cooldownTimer.start();
+            stats.isUntargetable = false;
         }
 
         @Override 

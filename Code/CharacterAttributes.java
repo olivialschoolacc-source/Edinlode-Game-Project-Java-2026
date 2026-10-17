@@ -15,6 +15,7 @@ public class CharacterAttributes {
     // Armor & Resistances
     public int armor = 0; // value; how much armor do you have?
     public double physicalRes = 0.0; // percent; how much damage reduced from physical?
+    public Map<String, Double> elementalRes = new Hashtable<>(); // collection of all elemental resistances
     public double fireRes = 0.0; // percent; how much damage reduced from fire?
     public double lightningRes = 0.0; // percent; how much damage reduced from lightning?
     public double coldRes = 0.0; // percent; how much damage reduced from cold?
@@ -61,6 +62,7 @@ public class CharacterAttributes {
     // Boolean
     public boolean isDead = false;
     public boolean isInSafeZone = true;
+    public boolean isUntargetable = false;
 
     public CharacterAttributes() {
     
@@ -69,6 +71,13 @@ public class CharacterAttributes {
     public void updateValues() {
 
         calculate();
+
+        // Add elemental resistance values into Map
+        elementalRes.put("fireRes", fireRes);
+        elementalRes.put("lightningRes", lightningRes);
+        elementalRes.put("coldRes", coldRes);
+        elementalRes.put("poisonRes", poisonRes);
+        elementalRes.put("shadowRes", shadowRes);
 
         // Add elemental damage values into Map
         elementalDamage.put("fireDmg", fireDmg);

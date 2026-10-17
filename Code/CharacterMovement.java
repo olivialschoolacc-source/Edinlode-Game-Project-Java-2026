@@ -238,6 +238,7 @@ public class CharacterMovement {
 
         Timer dashTimer = new Timer(DASH_DURATION_MS, e -> {
             ((Timer) e.getSource()).stop();
+            charAttStats.isUntargetable = true;
             mergeDashOverride = false;
             velX = activeDirection == 0 ? 0 : activeDirection * charAttStats.maxSpd;
         });

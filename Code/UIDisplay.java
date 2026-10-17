@@ -36,7 +36,7 @@ public class UIDisplay {
         healthOrb = new HealthOrbClass(stats);
         manaOrb = new ManaOrbClass(stats);
         potion = new PotionClass();
-        dash = new DashClass();
+        dash = new DashClass(stats);
 
         JPanel healthHoverBox = new JPanel();
         JLabel healthLabel = new JLabel();
