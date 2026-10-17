@@ -111,6 +111,20 @@ public class UIDisplay {
                 frame.repaint();
             }
         });
+        potion.addMouseListener(new MouseAdapter() {
+            @Override 
+            public void mousePressed(MouseEvent e) {
+                statsPotionLogic.potionClicked();
+                frame.repaint();
+            }
+        });
+        dash.addMouseListener(new MouseAdapter() {
+            @Override 
+            public void mousePressed(MouseEvent e) {
+                statsDashLogic.dashClicked();
+                frame.repaint();
+            }
+        });
 
         for (JComponent component : uiElements) {
             frame.add(component);
