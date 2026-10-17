@@ -53,9 +53,6 @@ public class CharacterMovement {
         this.charAttStats = charAttStats;
 
         setupKeyboardInput(frame);
-
-        Timer gameloop = new Timer(16, e -> updateFieldAndCollision());
-        gameloop.start();
     }
 
     public void setDashLogic(DashLogic dashLogic) {

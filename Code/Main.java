@@ -4,10 +4,15 @@ import javax.swing.*;
 
 public class Main {
     
+    private static CharacterMovement movement;
+    private static CharacterAttributes attributes;
+    private static CharacterDisplay display;
+    private static UIDisplay uiDisplay;
+
     public static void main(String[] args) {
 
-        CharacterAttributes attributes = new CharacterAttributes();
-        CharacterDisplay display = new CharacterDisplay();
+        attributes = new CharacterAttributes();
+        display = new CharacterDisplay();
 
         Dimension userScreenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
@@ -25,10 +30,10 @@ public class Main {
         frame.setLayout(null);
         frame.getContentPane().setBackground(new Color(150, 150, 150));
 
-        CharacterMovement movement = new CharacterMovement(frame, display, attributes);
+        movement = new CharacterMovement(frame, display, attributes);
         display.characterDisplay(frame, movement);
 
-        UIDisplay UIdisplay = new UIDisplay(frame, attributes, movement);
+        uiDisplay = new UIDisplay(frame, attributes, movement);
 
         Damage damage = new Damage(frame, movement, display, attributes);
         movement.setDamageSystem(damage);
@@ -36,5 +41,13 @@ public class Main {
         frame.setVisible(true);
 
         frame.repaint();
+
+        Timer gameloop = new Timer(16, e -> update());
+        gameloop.start();
+    }
+
+    private static void update() {
+        movement.updateFieldAndCollision();
+        attributes.updateValues();
     }
 }
