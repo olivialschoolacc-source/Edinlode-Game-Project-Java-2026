@@ -2,8 +2,7 @@ package Code;
 
 import java.awt.*;
 import javax.swing.*;
-import java.awt.KeyEventDispatcher;
-import java.awt.KeyboardFocusManager;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -43,6 +42,8 @@ public class CharacterMovement {
     private DashLogic dashLogic;
     public Damage damageSystem;
 
+    public int knockbackFrames = 0;
+
     private JFrame frame;
     
     public CharacterMovement(JFrame frame, CharacterDisplay stats, CharacterAttributes charAttStats) {
@@ -59,6 +60,13 @@ public class CharacterMovement {
 
     public void setDashLogic(DashLogic dashLogic) {
         this.dashLogic = dashLogic;
+    }
+
+    public void applyKnockback(int direction) {
+        velX = direction * 12.0;
+        velY = -8.0;
+        isGrounded = false;
+        knockbackFrames = 12;
     }
 
     private void setupKeyboardInput(JFrame frame) {
@@ -86,7 +94,15 @@ public class CharacterMovement {
                         isMovingLeft = true;
                         updateActiveDirection(-1);
                         break;
+                    case KeyEvent.VK_A:
+                        isMovingLeft = true;
+                        updateActiveDirection(-1);
+                        break;
                     case KeyEvent.VK_RIGHT:
+                        isMovingRight = true;
+                        updateActiveDirection(1);
+                        break;
+                    case KeyEvent.VK_D:
                         isMovingRight = true;
                         updateActiveDirection(1);
                         break;
@@ -103,11 +119,19 @@ public class CharacterMovement {
                         break;
                     case KeyEvent.VK_LEFT:
                         isMovingLeft = false;
-                        updateActiveDirection(isMovingRight ? 1: 0);
+                        updateActiveDirection(isMovingRight ? 1 : 0);
+                        break;
+                    case KeyEvent.VK_A:
+                        isMovingLeft = false;
+                        updateActiveDirection(isMovingRight ? 1 : 0);
                         break;
                     case KeyEvent.VK_RIGHT:
                         isMovingRight = false;
                         updateActiveDirection(isMovingLeft ? -1 : 0);
+                        break;
+                    case KeyEvent.VK_D:
+                        isMovingRight = false;
+                        updateActiveDirection(isMovingRight ? -1 : 0);
                         break;
                     default:
                         break;
@@ -163,14 +187,18 @@ public class CharacterMovement {
         }
 
         if (!mergeDashOverride) {
-            if (activeDirection != 0) {
-                velX += activeDirection * ACCEL;
+            if (knockbackFrames > 0) {
+                knockbackFrames--;
             } else {
-                velX = 0;
-            }
+                if (activeDirection != 0) {
+                    velX += activeDirection * ACCEL;
+                } else {
+                    velX = 0;
+                }
 
-            if (velX > charAttStats.maxSpd) velX = charAttStats.maxSpd;
-            if (velX < -charAttStats.maxSpd) velX = -charAttStats.maxSpd;
+                if (velX > charAttStats.maxSpd) velX = charAttStats.maxSpd;
+                if (velX < -charAttStats.maxSpd) velX = -charAttStats.maxSpd;
+            }
         }
 
         if (!isGrounded) {

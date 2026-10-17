@@ -10,7 +10,7 @@ public class Damage {
     public int enemyWidth = 40, enemyHeight = 80;
 
     public double atkSpd = 0.625;
-    private double crtChance = 0.25;
+    private double crtChance = 0.5;
     private double crtDmg = 3;
     public int enemyDmg = 5;
 
@@ -63,10 +63,12 @@ public class Damage {
                 stats.charCurrHP -= enemyDmg * crtDmg;
                 lastAttackTime = currTime;
             } else {
-                stats.charCurrHP -= enemyDmg;
-                lastAttackTime = currTime;
+                stats.charCurrHP -= enemyDmg; 
             }
-            
+            lastAttackTime = currTime;
+
+            int kbDirection = (characterDisplay.character.getX() < enemyTester.getX()) ? -1 : 1;
+            characterMovement.applyKnockback(kbDirection);
         }
     }
 }
