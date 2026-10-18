@@ -44,6 +44,10 @@ public class DashLogic {
 
     private void useDash() {
 
+        if (stats.isUntargetable) {
+            return;
+        }
+
         if (dashVal <= 0 || isCoolingDown) {
             return;
         }

@@ -24,7 +24,6 @@ public class Dash {
         
             if (cooldownTimer != null && cooldownTimer.isRunning()) {
                 cooldownTimer.stop();
-                stats.isUntargetable = false;
             }
 
             cooldownProgress = 1f;
@@ -38,17 +37,14 @@ public class Dash {
                     1f - (float) elapsed / durationMs
                 );
 
-                stats.isUntargetable = false;
                 repaint();
 
                 if (cooldownProgress <= 0f) {
                     cooldownTimer.stop();
-                    stats.isUntargetable = false;
                 }
             });
 
             cooldownTimer.start();
-            stats.isUntargetable = false;
         }
 
         @Override 

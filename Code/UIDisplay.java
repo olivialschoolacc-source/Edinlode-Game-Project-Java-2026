@@ -17,6 +17,7 @@ import Code.UICode.Dash.DashClass;
 import Code.UICode.PotionLogic;
 import Code.UICode.DashLogic;
 import Code.UICode.Potion;
+import Code.UICode.InventoryUI;
 
 public class UIDisplay {
 
@@ -26,6 +27,7 @@ public class UIDisplay {
     private DashClass dash;
     private PotionLogic statsPotionLogic;
     private DashLogic statsDashLogic;
+    private InventoryUI inventory;
 
     List<JComponent> uiElements = new ArrayList<>();
     
@@ -37,6 +39,8 @@ public class UIDisplay {
         manaOrb = new ManaOrbClass(stats);
         potion = new PotionClass();
         dash = new DashClass(stats);
+
+        inventory = new InventoryUI(frame);
 
         JPanel healthHoverBox = new JPanel();
         JLabel healthLabel = new JLabel();
@@ -103,6 +107,7 @@ public class UIDisplay {
             @Override 
             public void keyPressed(KeyEvent e) {
                 statsPotionLogic.keyPressed(e);
+                inventory.keyPressed(e);
                 frame.repaint();
             }
             @Override
@@ -111,6 +116,7 @@ public class UIDisplay {
                 frame.repaint();
             }
         });
+
         potion.addMouseListener(new MouseAdapter() {
             @Override 
             public void mousePressed(MouseEvent e) {

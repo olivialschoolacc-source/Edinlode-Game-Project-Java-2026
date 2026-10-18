@@ -236,9 +236,13 @@ public class CharacterMovement {
         mergeDashOverride = true;
         velX = direction * charAttStats.maxSpd * 2.5;
 
+        charAttStats.isUntargetable = true;
+
         Timer dashTimer = new Timer(DASH_DURATION_MS, e -> {
             ((Timer) e.getSource()).stop();
-            charAttStats.isUntargetable = true;
+
+            charAttStats.isUntargetable = false;
+
             mergeDashOverride = false;
             velX = activeDirection == 0 ? 0 : activeDirection * charAttStats.maxSpd;
         });
