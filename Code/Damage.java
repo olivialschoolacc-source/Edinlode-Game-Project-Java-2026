@@ -55,21 +55,33 @@ public class Damage {
 
     public void attack() {
         long attackCooldownMs = (long) ((1.0 / atkSpd) * 1000);
-
         long currTime = System.currentTimeMillis();
 
         if (currTime - lastAttackTime >= attackCooldownMs) {
             if (stats.isUntargetable) {
                 return;
             }
+
+            double hpBefore = stats.charCurrHP;
+            boolean isCrit = false;
             
             if (random.nextInt(100) < crtChance * 100) {
                 stats.charCurrHP -= enemyDmg * crtDmg;
-                lastAttackTime = currTime;
+                isCrit = true;
             } else {
                 stats.charCurrHP -= enemyDmg; 
             }
             lastAttackTime = currTime;
+
+            int damageDealt = (int) (hpBefore - stats.charCurrHP);
+            if (damageDealt > 0) {
+                JFrame parentFrame = (JFrame) SwingUtilities.getWindowAncestor(enemyTester);
+                if (parentFrame != null) {
+                    double charX = characterDisplay.character.getX();
+                    double charY = characterDisplay.character.getY();
+                    new DamagePopup(parentFrame, charX + 10, charY - 20, damageDealt, isCrit);
+                }
+            }
 
             int kbDirection = (characterDisplay.character.getX() < enemyTester.getX()) ? -1 : 1;
             characterMovement.applyKnockback(kbDirection);
