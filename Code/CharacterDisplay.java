@@ -5,27 +5,27 @@ import javax.swing.*;
 
 public class CharacterDisplay {
 
-    public JPanel character = new JPanel();
-    private CharacterMovement stats;
+    public JPanel character = new JPanel(); // create the character display
+    private CharacterMovement stats; // get the characterMovement stats
 
-    public int characterWidth = 40, characterHeight = 80;
+    public int characterWidth = 40, characterHeight = 80; // character width and height (px)
 
     public void characterDisplay(JFrame frame, CharacterMovement stats) {
 
-        this.stats = stats;
+        this.stats = stats; // set stats
 
-        character.setBounds((int)stats.startPosX, (int)stats.startPosY, characterWidth, characterHeight);
-        character.setBackground(Color.BLUE);
+        character.setBounds((int)stats.startPosX, (int)stats.startPosY, characterWidth, characterHeight); // setBounds on the character display
+        character.setBackground(Color.BLUE); // set character colour
 
-        frame.add(character);
+        frame.add(character); // add character to frame
     }
 
-    public void changeAppearance() {
+    public void changeAppearance() { // change colour based on the direction the character is facing (debug purposes)
 
         if (stats.facingLeft) {
-            character.setBackground(Color.RED);
+            character.setBackground(Color.RED); // if facing left, RED
         } else {
-            character.setBackground(Color.BLUE);
+            character.setBackground(Color.BLUE); // if facing right, BLUE
         }
     }
 }

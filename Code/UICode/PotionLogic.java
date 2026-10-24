@@ -19,6 +19,7 @@ public class PotionLogic {
 
     public PotionLogic(PotionClass potion, CharacterAttributes stats, JLabel qtyLabel, JFrame frame) {
 
+        // set classes
         this.potion = potion;
         this.stats = stats;
         this.frame = frame;
@@ -28,7 +29,7 @@ public class PotionLogic {
     public void keyPressed(KeyEvent e) {
         int keyCode = e.getKeyCode();
 
-        if (keyCode == KeyEvent.VK_X) {
+        if (keyCode == KeyEvent.VK_X) { // check if X is pressed
             if (isXPressed) {
                 return;
             }
@@ -36,19 +37,19 @@ public class PotionLogic {
             if (potionVal > 0 && stats.charCurrHP < stats.charMaxHP) {
                 isXPressed = true;
                 potionVal -= 1;
-                stats.charCurrHP += stats.charMaxHP / 5;
+                stats.charCurrHP += stats.charMaxHP / 5; // 20 percent of max HP filled in one potion drink
 
                 if (stats.charCurrHP > stats.charMaxHP) {
-                    stats.charCurrHP = stats.charMaxHP;
+                    stats.charCurrHP = stats.charMaxHP; // dont let HP exeed max HP
                 }
                 if (qtyLabel != null) {
-                    qtyLabel.setText(String.valueOf(potionVal));
+                    qtyLabel.setText(String.valueOf(potionVal)); // reset quantity label value
                 }
             }
         }
     }
 
-    public void keyReleased(KeyEvent e) {
+    public void keyReleased(KeyEvent e) { // check if key released
         int keyCode = e.getKeyCode();
 
         if (keyCode == KeyEvent.VK_X) {
@@ -56,7 +57,7 @@ public class PotionLogic {
         }
     }
 
-    public void potionClicked() {
+    public void potionClicked() { // check if potion is manually clicked with mouse
         if (potionVal > 0 && stats.charCurrHP < stats.charMaxHP) {
             isXPressed = true;
             potionVal -= 1;

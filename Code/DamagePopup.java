@@ -12,21 +12,22 @@ public class DamagePopup extends JLabel {
     public DamagePopup(JFrame frame, double startX, double startY, int damageAmount, boolean isCrit) {
         setText("-" + damageAmount);
 
-        if (isCrit) {
+        if (isCrit) { // if damage is a critical, number colour orange
             setFont(new Font("Times New Roman", Font.BOLD, 22));
             setForeground(new Color(255, 165, 0));
-        } else {
+        } else { // if damage is not a critical and is a normal, number colour red
             setFont(new Font("Times New Roman", Font.BOLD, 22));
             setForeground(Color.RED);
         }
         
+        currentY = startY; // spawn Y coordinate
+        setBounds((int) startX, (int) currentY, 100, 30); // set the label bounds
 
-        currentY = startY;
-        setBounds((int) startX, (int) currentY, 100, 30);
-
+        // frame work
         frame.getLayeredPane().add(this, JLayeredPane.POPUP_LAYER);
         frame.repaint();
 
+        // timer starts when damage dealt to the character and spawns number, when timer stops, the number disappears
         animTimer = new Timer(16, e -> {
             currentY -= 1.5;
             alpha -= 0.03f;
@@ -45,6 +46,7 @@ public class DamagePopup extends JLabel {
         animTimer.start();
     }
 
+    // draw the number onto the screen
     @Override 
     protected void paintComponent(Graphics g) {
         Graphics2D g2d = (Graphics2D) g.create();

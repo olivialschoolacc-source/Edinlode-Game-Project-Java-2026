@@ -50,6 +50,7 @@ public class HealthOrb {
 
             healthPercent = Math.max(0, Math.min(1, healthPercent));
 
+            // drain and fill trail animations (value setting)
             if (previousHealthPercent < 0) {
                 previousHealthPercent = healthPercent;
                 displayHealthPercent = healthPercent;
@@ -89,6 +90,7 @@ public class HealthOrb {
 
             previousHealthPercent = healthPercent;
 
+            // trail for when damaged (health drained); orange
             int trailTopY = height - (int) (displayHealthPercent * height);
             Polygon trailWaveShape = new Polygon();
             for (int x = 0; x <= width; x++) {
@@ -109,6 +111,7 @@ public class HealthOrb {
             g2d.setPaint(trailGradient);
             g2d.fill(trailClipArea);
 
+            // normal health display; bright red
             int fluidTopY = height - (int) (healthPercent * height);
             Polygon liquidWaveShape = new Polygon();
             for (int x = 0; x <= width; x++) {
@@ -129,6 +132,7 @@ public class HealthOrb {
             g2d.setPaint(liquidGradient);
             g2d.fill(fluidClipArea);
 
+            // trail for when healed (health filled); dark deep red
             int healTopY = height - (int) (healDisplayPercent * height);
             int healBottomY = height - (int) (healTargetPercent * height);
 
@@ -161,6 +165,7 @@ public class HealthOrb {
             g2d.setPaint(healGradient);
             g2d.fill(healClipArea);
 
+            // finish remaining design
             g2d.setStroke(new BasicStroke(3.0f));
             g2d.setColor(new Color(110, 95, 75));
             g2d.draw(sphereBounds);

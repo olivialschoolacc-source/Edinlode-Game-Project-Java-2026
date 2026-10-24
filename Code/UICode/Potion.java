@@ -13,6 +13,7 @@ public class Potion {
         }
 
         @Override 
+        // create potion display orb
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
             Graphics2D g2d = (Graphics2D) g;

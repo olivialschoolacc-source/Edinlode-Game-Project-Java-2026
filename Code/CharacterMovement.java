@@ -48,6 +48,7 @@ public class CharacterMovement {
     
     public CharacterMovement(JFrame frame, CharacterDisplay stats, CharacterAttributes charAttStats) {
 
+        // set up classes and call function
         this.frame = frame;
         this.stats = stats;
         this.charAttStats = charAttStats;
@@ -55,58 +56,58 @@ public class CharacterMovement {
         setupKeyboardInput(frame);
     }
 
-    public void setDashLogic(DashLogic dashLogic) {
+    public void setDashLogic(DashLogic dashLogic) { // get the dashLogic to check when it happens
         this.dashLogic = dashLogic;
     }
 
-    public void applyKnockback(int direction) {
+    public void applyKnockback(int direction) { // apply knockback in the opposite direction character is facing
         velX = direction * 12.0;
         velY = -8.0;
         isGrounded = false;
         knockbackFrames = 12;
     }
 
-    private void setupKeyboardInput(JFrame frame) {
+    private void setupKeyboardInput(JFrame frame) { // set up the keyboard inputs
 
-        KeyboardFocusManager focusManager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
+        KeyboardFocusManager focusManager = KeyboardFocusManager.getCurrentKeyboardFocusManager(); // set keyboard focus manager
         KeyEventDispatcher dispatcher = e -> {
             if (getEventWindow(e) != frame) {
                 return false;
             }
 
-            if (e.getID() == KeyEvent.KEY_PRESSED) {
-                switch (e.getKeyCode()) {
-                    case KeyEvent.VK_SHIFT:
+            if (e.getID() == KeyEvent.KEY_PRESSED) { // check if key is pressed
+                switch (e.getKeyCode()) { // switch for the keycode
+                    case KeyEvent.VK_SHIFT: // if the KeyCode is shift, dash
                         if (!isShiftPressed) {
                             isShiftPressed = true;
                             if (dashLogic != null) {
-                                dashLogic.triggerDashInput();
+                                dashLogic.triggerDashInput(); // call dash
                             }
                         }
                         break;
-                    case KeyEvent.VK_SPACE:
-                        isSpacePressed = true;
+                    case KeyEvent.VK_SPACE: // if KeyCode is space, jump
+                        isSpacePressed = true; // boolean set
                         break;
-                    case KeyEvent.VK_LEFT:
+                    case KeyEvent.VK_LEFT: // if KeyCode is left arrow, move left
+                        isMovingLeft = true; // boolean set
+                        updateActiveDirection(-1); // direction facing set
+                        break;
+                    case KeyEvent.VK_A: // left arrow alternative
                         isMovingLeft = true;
                         updateActiveDirection(-1);
                         break;
-                    case KeyEvent.VK_A:
-                        isMovingLeft = true;
-                        updateActiveDirection(-1);
+                    case KeyEvent.VK_RIGHT: // if KeyCode is right arrow, move right
+                        isMovingRight = true; // boolean set
+                        updateActiveDirection(1); // direction facing set
                         break;
-                    case KeyEvent.VK_RIGHT:
-                        isMovingRight = true;
-                        updateActiveDirection(1);
-                        break;
-                    case KeyEvent.VK_D:
+                    case KeyEvent.VK_D: // right arrow alternative
                         isMovingRight = true;
                         updateActiveDirection(1);
                         break;
                     default:
                         break;
                 }
-            } else if (e.getID() == KeyEvent.KEY_RELEASED) {
+            } else if (e.getID() == KeyEvent.KEY_RELEASED) { // check if key released (same as above, just checking when to stop output)
                 switch (e.getKeyCode()) {
                     case KeyEvent.VK_SHIFT:
                         isShiftPressed = false;
@@ -138,7 +139,7 @@ public class CharacterMovement {
             return false;
         };
 
-        focusManager.addKeyEventDispatcher(dispatcher);
+        focusManager.addKeyEventDispatcher(dispatcher); // basic boolean and direction settings (reset)
         frame.addWindowFocusListener(new WindowAdapter() {
             @Override 
             public void windowLostFocus(WindowEvent e) {
@@ -154,13 +155,13 @@ public class CharacterMovement {
             }
 
             @Override 
-            public void windowClosed(WindowEvent e) {
+            public void windowClosed(WindowEvent e) { // reset when app closes
                 focusManager.removeKeyEventDispatcher(dispatcher);
             }
         });
     }
 
-    private Window getEventWindow(KeyEvent e) {
+    private Window getEventWindow(KeyEvent e) { // get event window
 
         if (!(e.getSource() instanceof Component)) {
             return null;
@@ -169,43 +170,43 @@ public class CharacterMovement {
         return source instanceof Window ? (Window) source : SwingUtilities.getWindowAncestor(source);
     }
     
-    private void updateActiveDirection(int direction) {
+    private void updateActiveDirection(int direction) { // update the active direction
         activeDirection = direction;
-        if (direction != 0) {
+        if (direction != 0) { // if direction is 0 (neutral)
             facingLeft = direction < 0;
             stats.changeAppearance();
         }
     }
 
-    public void updateFrame() {
+    public void updateFrame() { // update function for CharacterMovement exclusively; gets called seperately later on in Main.java
 
-        if (isSpacePressed && isGrounded) {
-            jump();
+        if (isSpacePressed && isGrounded) { // if space is pressed and character is on the ground
+            jump(); // call jump (just jump)
         }
 
-        if (!mergeDashOverride) {
-            if (knockbackFrames > 0) {
+        if (!mergeDashOverride) { // dash
+            if (knockbackFrames > 0) { // if in knockback
                 knockbackFrames--;
-            } else {
-                if (activeDirection != 0) {
-                    velX += activeDirection * ACCEL;
-                } else {
+            } else { // otherwise
+                if (activeDirection != 0) { // if the active direction is not neutral
+                    velX += activeDirection * ACCEL; // quickly shift towards the facing direction
+                } else { // if not set velocity to 0
                     velX = 0;
                 }
 
-                if (velX > charAttStats.maxSpd) velX = charAttStats.maxSpd;
-                if (velX < -charAttStats.maxSpd) velX = -charAttStats.maxSpd;
+                if (velX > charAttStats.maxSpd) velX = charAttStats.maxSpd; // cap the speed to maxSpeed for going right
+                if (velX < -charAttStats.maxSpd) velX = -charAttStats.maxSpd; // cap the speed to maxSpeed for going left
             }
         }
 
-        if (!isGrounded) {
-            velY += GRAVITY;
+        if (!isGrounded) { // if character not on ground (currently jumping)
+            velY += GRAVITY; // make character fall by adding the pulling force onto the character's Y position
         }
 
-        currPosX += velX;
-        currPosY += velY;
+        currPosX += velX; // set the current position
+        currPosY += velY; // set the current position
 
-        if (currPosY >= 800) {
+        if (currPosY >= 800) { // set floor level
             currPosY = 800;
             velY = 0;
             isGrounded = true;
@@ -213,14 +214,14 @@ public class CharacterMovement {
             isGrounded = false;
         }
 
-        stats.character.setLocation((int)currPosX, (int)currPosY);
+        stats.character.setLocation((int)currPosX, (int)currPosY); // set the character location
 
-        if (frame != null) {
-            frame.repaint();
+        if (frame != null) { // if frame is existent
+            frame.repaint(); // redraw (update)
         }
     }
 
-    public void updateFieldAndCollision() {
+    public void updateFieldAndCollision() { // check for collision
         updateFrame();
 
         if (damageSystem != null) {
@@ -228,20 +229,20 @@ public class CharacterMovement {
         }
     }
 
-    public void setDamageSystem(Damage damageSystem) {
+    public void setDamageSystem(Damage damageSystem) { // set the damage system
         this.damageSystem = damageSystem;
     }
 
-    public void startDash(int direction) {
-        mergeDashOverride = true;
-        velX = direction * charAttStats.maxSpd * 2.5;
+    public void startDash(int direction) { // start the dash and the dash timer
+        mergeDashOverride = true; // check if dashing
+        velX = direction * charAttStats.maxSpd * 2.5; // the character's X coordinate
 
-        charAttStats.isUntargetable = true;
+        charAttStats.isUntargetable = true; // make the character untargetable
 
-        Timer dashTimer = new Timer(DASH_DURATION_MS, e -> {
+        Timer dashTimer = new Timer(DASH_DURATION_MS, e -> { // check when dash starts
             ((Timer) e.getSource()).stop();
 
-            charAttStats.isUntargetable = false;
+            charAttStats.isUntargetable = false; // when dashTimer finishes and character is out of dash, reset untargetable
 
             mergeDashOverride = false;
             velX = activeDirection == 0 ? 0 : activeDirection * charAttStats.maxSpd;
@@ -250,7 +251,7 @@ public class CharacterMovement {
         dashTimer.start();
     }
 
-    public void jump() {
+    public void jump() { // jump by the max jump force of a character
         if (isGrounded) {
             velY = JUMP_F;
             isGrounded = false;

@@ -33,15 +33,17 @@ public class UIDisplay {
     
     public UIDisplay(JFrame frame, CharacterAttributes stats, CharacterMovement character) {
 
+        // set the layout to null for easier placement
         frame.getContentPane().setLayout(null);
 
+        // spawn in the UI classes
         healthOrb = new HealthOrbClass(stats);
         manaOrb = new ManaOrbClass(stats);
         potion = new PotionClass();
         dash = new DashClass(stats);
-
         inventory = new InventoryUI(frame);
 
+        // create health hover box (shows a display of how much health precisely)
         JPanel healthHoverBox = new JPanel();
         JLabel healthLabel = new JLabel();
         healthHoverBox.setBackground(new Color(0, 0, 0, 180));
@@ -51,6 +53,7 @@ public class UIDisplay {
         healthHoverBox.add(healthLabel);
         healthHoverBox.setVisible(false);
 
+        // create mana hover box (shows a display of how much mana precisely)
         JPanel manaHoverBox = new JPanel();
         JLabel manaLabel = new JLabel();
         manaHoverBox.setBackground(new Color(0, 0, 0, 180));
@@ -60,49 +63,58 @@ public class UIDisplay {
         manaHoverBox.add(manaLabel);
         manaHoverBox.setVisible(false);
 
+        // add components to the frame
         frame.add(healthHoverBox);
         frame.add(manaHoverBox);
 
-        int orbSize = frame.getHeight() / 8;
-        int miniOrbSize = orbSize / 2;
-        int bottomMargin = frame.getHeight() / 10;
-        int orbPosY = (frame.getHeight() - orbSize - bottomMargin);
+        // set the setBounds attributes
+        int orbSize = frame.getHeight() / 8; // base orb size (mana and health orbs) to 1/8 of the screen height
+        int miniOrbSize = orbSize / 2; // mini orb size (potion and dash) to half of the base orb size
+        int bottomMargin = frame.getHeight() / 10; // the margin from the bottom of the screen (a spare)
+        int orbPosY = (frame.getHeight() - orbSize - bottomMargin); // the base orb poisiton Y
+        int healthPosX = (frame.getWidth() - orbSize) / 4; // the X position of the healthOrb
+        int manaPosX = (frame.getWidth() - orbSize) / 4 * 3; // the X position of the manaOrb
+        int potionPosX = (frame.getWidth() + orbSize) / 4 - (orbSize / 2), potionPosY = orbPosY - (orbSize / 3); // the X position of the potion orb
+        int dashPosX = (frame.getWidth() - orbSize) / 4 * 3 + (orbSize / 2) + 10, dashPosY = orbPosY - (orbSize / 3); // the X position of the dash orb
 
-        int healthPosX = (frame.getWidth() - orbSize) / 4;
-        int manaPosX = (frame.getWidth() - orbSize) / 4 * 3;
-        int potionPosX = (frame.getWidth() + orbSize) / 4 - (orbSize / 2), potionPosY = orbPosY - (orbSize / 3);
-        int dashPosX = (frame.getWidth() - orbSize) / 4 * 3 + (orbSize / 2) + 10, dashPosY = orbPosY - (orbSize / 3);
-
+        // setBounds commands for components
         healthOrb.setBounds(healthPosX, orbPosY, orbSize, orbSize);
         manaOrb.setBounds(manaPosX, orbPosY, orbSize, orbSize);
         potion.setBounds(potionPosX, potionPosY, miniOrbSize, miniOrbSize);
         dash.setBounds(dashPosX, dashPosY, miniOrbSize, miniOrbSize);
 
+        // add the UI components to the UIElements list for later easy placement
         uiElements.add(healthOrb);
         uiElements.add(manaOrb);
         uiElements.add(potion);
         uiElements.add(dash);
 
+        // quantity label for the potion orb
         JLabel potionQtyLabel = new JLabel();
         potionQtyLabel.setForeground(Color.WHITE);
         potionQtyLabel.setFont(new Font("Times New Roman", Font.BOLD, miniOrbSize / 4));
 
+        // quantity label for the dash orb
         JLabel dashQtyLabel = new JLabel();
         dashQtyLabel.setForeground(Color.WHITE);
         dashQtyLabel.setFont(new Font("Times New Roman", Font.BOLD, miniOrbSize / 4));
 
+        // set the logics (actual functions for making it work)
         this.statsPotionLogic = new PotionLogic(potion, stats, potionQtyLabel, frame);
         potionQtyLabel.setText(String.valueOf(statsPotionLogic.potionVal));
         this.statsDashLogic = new DashLogic(dash, stats, dashQtyLabel, frame, character);
         character.setDashLogic(statsDashLogic);
         dashQtyLabel.setText(String.valueOf(statsDashLogic.dashVal));
 
+        // setBounds commands for the quantity labels
         potionQtyLabel.setBounds(potionPosX + (miniOrbSize / 3), potionPosY + (miniOrbSize / 4), miniOrbSize / 2, miniOrbSize / 2);
         dashQtyLabel.setBounds(dashPosX + (miniOrbSize / 3), dashPosY + (miniOrbSize / 4), miniOrbSize / 2, miniOrbSize / 2);
 
+        // add quantity labels to frame
         frame.add(potionQtyLabel);
         frame.add(dashQtyLabel);
 
+        // KeyListener for key-controlled UI
         frame.addKeyListener(new KeyAdapter() {
             @Override 
             public void keyPressed(KeyEvent e) {
@@ -117,6 +129,7 @@ public class UIDisplay {
             }
         });
 
+        // Click listeners for the potion and dash orbs
         potion.addMouseListener(new MouseAdapter() {
             @Override 
             public void mousePressed(MouseEvent e) {
@@ -132,10 +145,12 @@ public class UIDisplay {
             }
         });
 
+        // for loop to add each component in the uiElements list
         for (JComponent component : uiElements) {
             frame.add(component);
         }
 
+        // hover adapter for the health hover labels
         MouseAdapter healthHoverAdapter = new MouseAdapter() {
             @Override 
             public void mouseEntered(MouseEvent e) {
@@ -158,6 +173,7 @@ public class UIDisplay {
             }
         };
 
+        // hover adapter for the mana hover labels
         MouseAdapter manaHoverAdapter = new MouseAdapter() {
             @Override  
             public void mouseEntered(MouseEvent e) {
@@ -180,12 +196,13 @@ public class UIDisplay {
             }
         };
 
+        // add mouseListeners and mouseMotionListeners to components
         healthOrb.addMouseListener(healthHoverAdapter);
         healthOrb.addMouseMotionListener(healthHoverAdapter);
-
         manaOrb.addMouseListener(manaHoverAdapter);
         manaOrb.addMouseMotionListener(manaHoverAdapter);
 
+        // reset frame
         frame.revalidate();
         frame.repaint();
     }

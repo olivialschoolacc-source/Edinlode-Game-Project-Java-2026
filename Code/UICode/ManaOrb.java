@@ -23,7 +23,7 @@ public class ManaOrb {
 
         public void updateWaveAnimation() {
 
-            wavePhase += 0.12;
+            wavePhase += 0.12; // wave calculation value
         }
 
         @Override 
@@ -39,10 +39,10 @@ public class ManaOrb {
 
             Ellipse2D.Double sphereBounds = new Ellipse2D.Double(2, 2, width - 4, height - 4);
 
-            g2d.setColor(new Color(10, 15, 30, 220));
+            g2d.setColor(new Color(10, 15, 30, 220)); // background
             g2d.fill(sphereBounds);
 
-            double manaPercent = stats.charCurrMana / stats.charMaxMana;
+            double manaPercent = stats.charCurrMana / stats.charMaxMana; 
             if (manaPercent < 0) manaPercent = 0;
 
             int fluidTopY = height - (int) (manaPercent * height);

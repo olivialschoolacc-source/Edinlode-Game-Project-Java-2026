@@ -10,9 +10,11 @@ public class Dash {
 
     public static class DashClass extends JComponent {
 
+        // set variables
         private float cooldownProgress = 0f;
         private Timer cooldownTimer;
 
+        // call in classes
         private CharacterAttributes stats;
     
         public DashClass(CharacterAttributes stats) {
@@ -20,7 +22,7 @@ public class Dash {
             this.stats = stats;
         }
 
-        public void startCooldown(int durationMs) {
+        public void startCooldown(int durationMs) { // start the cooldown
         
             if (cooldownTimer != null && cooldownTimer.isRunning()) {
                 cooldownTimer.stop();
@@ -48,7 +50,7 @@ public class Dash {
         }
 
         @Override 
-        protected void paintComponent(Graphics g) {
+        protected void paintComponent(Graphics g) { // make the dash orb
             super.paintComponent(g);
 
             Graphics2D g2d = (Graphics2D) g;

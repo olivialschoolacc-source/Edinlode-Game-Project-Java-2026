@@ -39,6 +39,7 @@ public class CharacterAttributes {
     public double shadowDmg = 0.0; // percent; how much extra damage using shadow?
     public double bossDmg = 0.0; // percent; how much extra damage to bosses?
     public double thorns = 0; // percent; how much damage is reflected?
+    public double range = 10; // value; how far away can the character attack with basic attacks?
 
     // Defensive
     public double charMaxHP = 100; // value; character's max health value
@@ -68,6 +69,7 @@ public class CharacterAttributes {
     
     }
 
+    // update values of the hashmaps
     public void updateValues() {
 
         calculate();
@@ -110,6 +112,8 @@ public class CharacterAttributes {
          // when character's current health value hits 0, tick on isDead
          if (charCurrHP <= 0) {
             isDead = true;
+            charCurrHP = 0; // dont let HP go under 0
+            System.out.println(isDead); // debug
          }
          
     }
