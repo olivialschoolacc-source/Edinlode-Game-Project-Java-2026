@@ -97,4 +97,4 @@ public class Damage {
             characterMovement.applyKnockback(kbDirection);
         }
     }
-}
+} 

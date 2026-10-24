@@ -18,6 +18,7 @@ import Code.UICode.PotionLogic;
 import Code.UICode.DashLogic;
 import Code.UICode.Potion;
 import Code.UICode.InventoryUI;
+import Code.UICode.Map;
 
 public class UIDisplay {
 
@@ -28,6 +29,7 @@ public class UIDisplay {
     private PotionLogic statsPotionLogic;
     private DashLogic statsDashLogic;
     private InventoryUI inventory;
+    private Map map;
 
     List<JComponent> uiElements = new ArrayList<>();
     
@@ -42,6 +44,7 @@ public class UIDisplay {
         potion = new PotionClass();
         dash = new DashClass(stats);
         inventory = new InventoryUI(frame);
+        map = new Map(frame);
 
         // create health hover box (shows a display of how much health precisely)
         JPanel healthHoverBox = new JPanel();
@@ -120,6 +123,7 @@ public class UIDisplay {
             public void keyPressed(KeyEvent e) {
                 statsPotionLogic.keyPressed(e);
                 inventory.keyPressed(e);
+                map.keyPressed(e);
                 frame.repaint();
             }
             @Override
