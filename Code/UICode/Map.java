@@ -18,7 +18,7 @@ public class Map {
         mapPanel.setBackground(new Color(0,0,0,200));
         mapPanel.setLayout(new GridBagLayout());
 
-        int mapWidth = 1100, mapHeight = 900;
+        int mapWidth = 400, mapHeight = 300;
 
         java.net.URL imgUrl = getClass().getResource("/assets/images/map/Edinlode.png");
 
@@ -36,7 +36,7 @@ public class Map {
             System.err.println("Error: Could not load /assets/images/map/Edinlode.png");
         }
 
-        int mapX = (frame.getWidth() - mapWidth) / 2, mapY = (frame.getHeight() - mapHeight) / 2;
+        int mapX = 200, mapY = 100;
 
         mapPanel.setBounds(mapX, mapY, mapWidth, mapHeight);
         mapPanel.setVisible(false);

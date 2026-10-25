@@ -71,14 +71,14 @@ public class UIDisplay {
         frame.add(manaHoverBox);
 
         // set the setBounds attributes
-        int orbSize = frame.getHeight() / 8; // base orb size (mana and health orbs) to 1/8 of the screen height
-        int miniOrbSize = orbSize / 2; // mini orb size (potion and dash) to half of the base orb size
-        int bottomMargin = frame.getHeight() / 10; // the margin from the bottom of the screen (a spare)
+        int orbSize = 100; // base orb size (mana and health orbs) to 1/8 of the screen height
+        int miniOrbSize = 55; // mini orb size (potion and dash) to half of the base orb size
+        int bottomMargin = 60; // the margin from the bottom of the screen (a spare)
         int orbPosY = (frame.getHeight() - orbSize - bottomMargin); // the base orb poisiton Y
-        int healthPosX = (frame.getWidth() - orbSize) / 4; // the X position of the healthOrb
-        int manaPosX = (frame.getWidth() - orbSize) / 4 * 3; // the X position of the manaOrb
-        int potionPosX = (frame.getWidth() + orbSize) / 4 - (orbSize / 2), potionPosY = orbPosY - (orbSize / 3); // the X position of the potion orb
-        int dashPosX = (frame.getWidth() - orbSize) / 4 * 3 + (orbSize / 2) + 10, dashPosY = orbPosY - (orbSize / 3); // the X position of the dash orb
+        int healthPosX = 150; // the X position of the healthOrb
+        int manaPosX = 550; // the X position of the manaOrb
+        int potionPosX = healthPosX - miniOrbSize + 10, potionPosY = orbPosY - (orbSize / 4); // the X position of the potion orb
+        int dashPosX = manaPosX + orbSize, dashPosY = orbPosY - (orbSize / 4); // the X position of the dash orb
 
         // setBounds commands for components
         healthOrb.setBounds(healthPosX, orbPosY, orbSize, orbSize);

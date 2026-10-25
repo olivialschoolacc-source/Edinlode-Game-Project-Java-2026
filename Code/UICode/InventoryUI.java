@@ -50,16 +50,17 @@ public class InventoryUI {
 
         inventoryPanel = new JPanel(); // set the base inventory panel
         inventoryPanel.setBackground(Color.DARK_GRAY);
-        inventoryPanel.setBounds(frame.getWidth()/4 * 3, 0, frame.getWidth()/4, frame.getHeight());
+        inventoryPanel.setBounds(500, 0, 300, frame.getHeight());
         inventoryPanel.setLayout(null);
 
+        int characterPanelMargin = 10;
         characterPanel = new JPanel();
         characterPanel.setBackground(Color.LIGHT_GRAY);
         characterPanel.setBounds(
-            inventoryPanel.getWidth()/20 * 1,
-            inventoryPanel.getHeight()/2/20*1,
-            inventoryPanel.getWidth()/20*18,
-            inventoryPanel.getHeight()/2/20*18
+            characterPanelMargin,
+            characterPanelMargin,
+            inventoryPanel.getWidth() - (characterPanelMargin * 2) - characterPanelMargin - 5,
+            inventoryPanel.getWidth() - (characterPanelMargin * 2) - 5
         ); // set character panel where it shows equipped items and character related stats
 
         // call in functions
@@ -75,12 +76,12 @@ public class InventoryUI {
     }
 
     private void spawnItemSlots() {
-        int slotSize = 100; // slot sizes width and height (square)
-        int spacing = 10; // spacing between each slot
-        int startX = 20; // placement starting X
-        int startY = 20; // placement starting Y
+        int slotSize = 40; // slot sizes width and height (square)
+        int spacing = 3; // spacing between each slot
+        int startX = 10; // placement starting X
+        int startY = 10; // placement starting Y
 
-        int maxColumns = 4; // max no of columns
+        int maxColumns = 3; // max no of columns
 
         for (int i = 0; i < slotNames.length; i++) { // for loop for easy quick placement
             String slotName = slotNames[i];
@@ -101,7 +102,7 @@ public class InventoryUI {
 
             // set the labels for each slot
             JLabel label = new JLabel("<html><center>" + slotName.replace(" ", "<br>") + "</center></html>", SwingConstants.CENTER);
-            label.setFont(new Font("Times New Roman", Font.PLAIN, 10));
+            label.setFont(new Font("Times New Roman", Font.PLAIN, 7));
             label.setForeground(Color.WHITE);
             label.setBounds(2, 2, slotSize - 4, slotSize - 4);
             slotPanel.add(label);
@@ -113,11 +114,11 @@ public class InventoryUI {
     }
 
     private void spawnCharacterPreview() { // make the enlarged character preview
-        int previewWidth = 120; // character width
-        int previewHeight = 240; // character height
+        int previewWidth = 50; // character width
+        int previewHeight = 100; // character height
 
-        int previewX = 550; // where to spawn X
-        int previewY = 245; // where to spawn Y
+        int previewX = 175; // where to spawn X
+        int previewY = 100; // where to spawn Y
 
         // create the character (later replaced with actual character design)
         characterPreviewPanel = new JPanel();
@@ -128,7 +129,7 @@ public class InventoryUI {
         // label for the character (just a placeholder, later goes username)
         JLabel previewLabel = new JLabel("Character", SwingConstants.CENTER);
         previewLabel.setForeground(Color.WHITE);
-        previewLabel.setFont(new Font("Times New Roman", Font.BOLD, 14));
+        previewLabel.setFont(new Font("Times New Roman", Font.BOLD, 10));
         characterPreviewPanel.add(previewLabel);
 
         characterPanel.add(characterPreviewPanel); // add to screen

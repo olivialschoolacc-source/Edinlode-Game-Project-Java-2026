@@ -27,6 +27,7 @@ public class CharacterMovement {
     public final double GRAVITY = 1.5;
     public final double JUMP_F = -20.0;
     private static final int DASH_DURATION_MS = 160;
+    private final int FLOOR_LEVEL = 355;
 
     // Bool
     public boolean mergeDashOverride = false;
@@ -129,7 +130,7 @@ public class CharacterMovement {
                         break;
                     case KeyEvent.VK_D:
                         isMovingRight = false;
-                        updateActiveDirection(isMovingRight ? -1 : 0);
+                        updateActiveDirection(isMovingLeft ? -1 : 0);
                         break;
                     default:
                         break;
@@ -206,8 +207,8 @@ public class CharacterMovement {
         currPosX += velX; // set the current position
         currPosY += velY; // set the current position
 
-        if (currPosY >= 800) { // set floor level
-            currPosY = 800;
+        if (currPosY >= FLOOR_LEVEL) { // set floor level
+            currPosY = FLOOR_LEVEL;
             velY = 0;
             isGrounded = true;
         } else {

@@ -16,16 +16,18 @@ public class Main {
         display = new CharacterDisplay();
 
         // set the screen dimension
-        Dimension userScreenSize = Toolkit.getDefaultToolkit().getScreenSize(); // get the user's computer screen size
-        int userScreenWidth = userScreenSize.width; // set to fullscreen
-        int userScreenHeight = userScreenSize.height; // set to fullscreen
+        // Dimension userScreenSize = Toolkit.getDefaultToolkit().getScreenSize(); // get the user's computer screen size
+        // int userScreenWidth = userScreenSize.width; // set to fullscreen
+        // int userScreenHeight = userScreenSize.height; // set to fullscreen
+
+        int screenWidth = 800, screenHeight = 600;
 
         // Create JFrame
         JFrame frame = new JFrame("Edinlode");
 
         // extra attributes for the JFrame
         frame.setResizable(false); // cannot resize, always fullscreen
-        frame.setSize(userScreenWidth, userScreenHeight); // set the size
+        frame.setSize(screenWidth, screenHeight); // set the size
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // make it exit when X pressed
         frame.setLocationRelativeTo(null); // window spawn location null
         frame.setLayout(null); // set layout to null

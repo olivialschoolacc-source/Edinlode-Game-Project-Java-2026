@@ -8,7 +8,7 @@ public class CharacterDisplay {
     public JPanel character = new JPanel(); // create the character display
     private CharacterMovement stats; // get the characterMovement stats
 
-    public int characterWidth = 40, characterHeight = 80; // character width and height (px)
+    public int characterWidth = 30, characterHeight = 60; // character width and height (px)
 
     public void characterDisplay(JFrame frame, CharacterMovement stats) {
 
