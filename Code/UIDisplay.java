@@ -71,12 +71,12 @@ public class UIDisplay {
         frame.add(manaHoverBox);
 
         // set the setBounds attributes
-        int orbSize = 100; // base orb size (mana and health orbs) to 1/8 of the screen height
-        int miniOrbSize = 55; // mini orb size (potion and dash) to half of the base orb size
+        int orbSize = 125; // base orb size (mana and health orbs) to 1/8 of the screen height
+        int miniOrbSize = 65; // mini orb size (potion and dash) to half of the base orb size
         int bottomMargin = 60; // the margin from the bottom of the screen (a spare)
         int orbPosY = (frame.getHeight() - orbSize - bottomMargin); // the base orb poisiton Y
         int healthPosX = 150; // the X position of the healthOrb
-        int manaPosX = 550; // the X position of the manaOrb
+        int manaPosX = 720; // the X position of the manaOrb
         int potionPosX = healthPosX - miniOrbSize + 10, potionPosY = orbPosY - (orbSize / 4); // the X position of the potion orb
         int dashPosX = manaPosX + orbSize, dashPosY = orbPosY - (orbSize / 4); // the X position of the dash orb
 

@@ -20,7 +20,7 @@ public class Main {
         // int userScreenWidth = userScreenSize.width; // set to fullscreen
         // int userScreenHeight = userScreenSize.height; // set to fullscreen
 
-        int screenWidth = 800, screenHeight = 600;
+        int screenWidth = 1000, screenHeight = 800;
 
         // Create JFrame
         JFrame frame = new JFrame("Edinlode");

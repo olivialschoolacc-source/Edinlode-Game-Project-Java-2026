@@ -27,7 +27,7 @@ public class CharacterMovement {
     public final double GRAVITY = 1.5;
     public final double JUMP_F = -20.0;
     private static final int DASH_DURATION_MS = 160;
-    private final int FLOOR_LEVEL = 355;
+    private final int FLOOR_LEVEL = 500;
 
     // Bool
     public boolean mergeDashOverride = false;
@@ -44,6 +44,11 @@ public class CharacterMovement {
     public Damage damageSystem;
 
     public int knockbackFrames = 0;
+
+    private int nameWidth;
+    private int charWidth;
+    private int nameX;
+    private int nameY;
 
     private JFrame frame;
     
@@ -216,6 +221,13 @@ public class CharacterMovement {
         }
 
         stats.character.setLocation((int)currPosX, (int)currPosY); // set the character location
+
+        nameWidth = stats.username.getWidth();
+        charWidth = stats.characterWidth;
+        nameX = stats.character.getX() + (charWidth / 2) - (nameWidth / 2);
+        nameY = stats.character.getY() - 22;
+
+        stats.username.setLocation(nameX, nameY);
 
         if (frame != null) { // if frame is existent
             frame.repaint(); // redraw (update)

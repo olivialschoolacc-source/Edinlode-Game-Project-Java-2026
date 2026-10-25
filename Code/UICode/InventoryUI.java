@@ -50,7 +50,7 @@ public class InventoryUI {
 
         inventoryPanel = new JPanel(); // set the base inventory panel
         inventoryPanel.setBackground(Color.DARK_GRAY);
-        inventoryPanel.setBounds(500, 0, 300, frame.getHeight());
+        inventoryPanel.setBounds(600, 0, 400, frame.getHeight());
         inventoryPanel.setLayout(null);
 
         int characterPanelMargin = 10;
@@ -68,16 +68,15 @@ public class InventoryUI {
         spawnCharacterPreview();
 
         inventoryPanel.setVisible(false);
+        frame.getLayeredPane().add(inventoryPanel, JLayeredPane.MODAL_LAYER);
         characterPanel.setLayout(null);
-
-        frame.add(inventoryPanel);
 
         inventoryPanel.add(characterPanel);
     }
 
     private void spawnItemSlots() {
-        int slotSize = 40; // slot sizes width and height (square)
-        int spacing = 3; // spacing between each slot
+        int slotSize = 55; // slot sizes width and height (square)
+        int spacing = 5; // spacing between each slot
         int startX = 10; // placement starting X
         int startY = 10; // placement starting Y
 
@@ -102,7 +101,7 @@ public class InventoryUI {
 
             // set the labels for each slot
             JLabel label = new JLabel("<html><center>" + slotName.replace(" ", "<br>") + "</center></html>", SwingConstants.CENTER);
-            label.setFont(new Font("Times New Roman", Font.PLAIN, 7));
+            label.setFont(new Font("Times New Roman", Font.PLAIN, 9));
             label.setForeground(Color.WHITE);
             label.setBounds(2, 2, slotSize - 4, slotSize - 4);
             slotPanel.add(label);
@@ -114,17 +113,16 @@ public class InventoryUI {
     }
 
     private void spawnCharacterPreview() { // make the enlarged character preview
-        int previewWidth = 50; // character width
-        int previewHeight = 100; // character height
+        int previewWidth = 60; // character width
+        int previewHeight = 120; // character height
 
-        int previewX = 175; // where to spawn X
-        int previewY = 100; // where to spawn Y
+        int previewX = 245; // where to spawn X
+        int previewY = 150; // where to spawn Y
 
         // create the character (later replaced with actual character design)
         characterPreviewPanel = new JPanel();
         characterPreviewPanel.setBounds(previewX, previewY, previewWidth, previewHeight);
         characterPreviewPanel.setBackground(Color.BLUE);
-        characterPreviewPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         
         // label for the character (just a placeholder, later goes username)
         JLabel previewLabel = new JLabel("Character", SwingConstants.CENTER);
@@ -141,6 +139,10 @@ public class InventoryUI {
         if (keyCode == KeyEvent.VK_I) {
             boolean visible = inventoryPanel.isVisible();
             inventoryPanel.setVisible(!visible);
+
+            if (!visible) {
+                frame.getLayeredPane().moveToFront(inventoryPanel);
+            }
 
             if (frame != null) {
                 frame.revalidate();

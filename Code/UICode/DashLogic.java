@@ -35,7 +35,7 @@ public class DashLogic {
 
     private void updateCooldown() { // update cooldown
 
-        cooldown = 5000 * (1.0 - stats.cdReduction); // 5 seconds cooldown; cooldown reduction applied
+        cooldown = 10000 * (1.0 - stats.cdReduction); // 10 seconds cooldown; cooldown reduction applied
         cooldown = Math.max(0, cooldown);
     }
 

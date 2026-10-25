@@ -7,8 +7,8 @@ import java.util.Random;
 public class Damage {
 
     // temporary enemy positions and size
-    public int enemyPosX = 600, enemyPosY = 800;
-    public int enemyWidth = 40, enemyHeight = 80;
+    public int enemyPosX = 700, enemyPosY = 500;
+    public int enemyWidth = 30, enemyHeight = 60;
 
     // temporary enemy stats
     public double atkSpd = 0.625; // attack speed

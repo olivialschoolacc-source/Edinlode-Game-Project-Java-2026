@@ -18,7 +18,7 @@ public class Map {
         mapPanel.setBackground(new Color(0,0,0,200));
         mapPanel.setLayout(new GridBagLayout());
 
-        int mapWidth = 400, mapHeight = 300;
+        int mapWidth = 600, mapHeight = 500;
 
         java.net.URL imgUrl = getClass().getResource("/assets/images/map/Edinlode.png");
 

@@ -55,7 +55,7 @@ public class CharacterAttributes {
     public double charCurrMana = 100; // value; character's current mana value
     public double manaRegenVal = 0.0; // value; x mana per 5000 millisecond
     public int manaRegenTime = 5000; // value; 5000 millisecond for each regen
-    public double cdReduction = 0.95; // percent; cooldown reduction
+    public double cdReduction = 0.0; // percent; cooldown reduction
     public double maxSpd = 5.0; // value; max speed applicable
     public double expBonus = 1.0; // percent; how much exp bonus?
     public int maxDashVal = 1; // value; max
