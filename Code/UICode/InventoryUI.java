@@ -15,29 +15,14 @@ public class InventoryUI {
 
     public JPanel inventoryPanel;
     public JPanel characterPanel;
+    public JPanel bagPanel;
     private JFrame frame;
     private JPanel characterPreviewPanel;
-
-    // ITEM PANELS
-    public JPanel hatPanel; // 1, for a hat
-    public JPanel chestArmorPanel; // 2, for a chest armor
-    public JPanel pantsPanel; // 3, for a pair of pants
-    public JPanel bootsPanel; // 4, for a pair of boots
-    public JPanel fullBodyArmorPanel; // 5, for a armor that includes both chest and leg armor
-    public JPanel capePanel; // 6, for an extra coverage layer
-    public JPanel amulet1Panel; // 7, for a necklace
-    public JPanel amulet2Panel; // 8. for another necklace
-    public JPanel ring1Panel; // 9, for a ring
-    public JPanel ring2Panel; // 10, for another ring
-    public JPanel mainhandWeaponPanel; // 11, for a mainhand weapon (main weapon)
-    public JPanel secondaryWeaponPanel; // 12, for a secondary weapon (like orbs)
-    public JPanel storagePanel; // 13, for a restockable weapon (like arrows or throwing stars)
-    public JPanel extra1Panel; // 14, for an extra (tba)
-    public JPanel extra2Panel; // 15, for an extra (tba)
-    public JPanel pet; // 16, for a pet (for item pickup)
+    private JScrollPane scrollPane;
 
     private Font customFont = FontLoader.loadCustomFont("/assets/font/GrapeSoda.ttf", 12f);
 
+    // EQUIPMENT SLOTS
     public Map<String, JPanel> itemPanels = new Hashtable<>(); // collection of all item panels
 
     private final String[] slotNames = {
@@ -63,18 +48,60 @@ public class InventoryUI {
             characterPanelMargin,
             characterPanelMargin,
             inventoryPanel.getWidth() - (characterPanelMargin * 2) - characterPanelMargin - 5,
-            inventoryPanel.getWidth() - (characterPanelMargin * 2) - 5
+            375
         ); // set character panel where it shows equipped items and character related stats
 
         // call in functions
         spawnItemSlots();
         spawnCharacterPreview();
 
+        // scrollable bag
+        bagPanel = new JPanel();
+        bagPanel.setBackground(new Color(60, 60, 60));
+        bagPanel.setLayout(null);
+
+        int slotSize = 50;
+        int spacing = 5;
+        int maxColumns = 6;
+        int totalSlots = 60;
+
+        int bagWidth = (maxColumns * slotSize) + ((maxColumns + 1) * spacing);
+        int rows = (int) Math.ceil((double) totalSlots / maxColumns);
+        int bagHeight = (rows * slotSize) + ((rows + 1) * spacing);
+        bagPanel.setPreferredSize(new Dimension(bagWidth - 20, bagHeight));
+
+        for (int i = 0; i < totalSlots; i++) {
+            int col = i % maxColumns;
+            int row = i / maxColumns;
+
+            int x = spacing + col * (slotSize + spacing);
+            int y = spacing + row * (slotSize + spacing);
+
+            JPanel bagSlot = new JPanel();
+            bagSlot.setBounds(x, y, slotSize, slotSize);
+            bagSlot.setBackground(new Color(90, 90, 90));
+            bagSlot.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+
+            bagPanel.add(bagSlot);
+        }
+
+        int scrollX = characterPanelMargin;
+        int scrollY = characterPanel.getY() + characterPanel.getHeight() + 10;
+        int scrollWidth = characterPanel.getWidth();
+        int scrollHeight = inventoryPanel.getHeight() - scrollY - 20;
+
+        scrollPane = new JScrollPane(bagPanel);
+        scrollPane.setBounds(scrollX, scrollY, scrollWidth, scrollHeight);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.getVerticalScrollBar().setUnitIncrement(16); // debug (?) for smooth scrolling
+
+        inventoryPanel.add(characterPanel);
+        inventoryPanel.add(scrollPane);
+
         inventoryPanel.setVisible(false);
         frame.getLayeredPane().add(inventoryPanel, JLayeredPane.MODAL_LAYER);
         characterPanel.setLayout(null);
-
-        inventoryPanel.add(characterPanel);
     }
 
     private void spawnItemSlots() {
