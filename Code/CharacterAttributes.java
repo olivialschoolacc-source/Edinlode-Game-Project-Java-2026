@@ -65,6 +65,9 @@ public class CharacterAttributes {
     public boolean isInSafeZone = true;
     public boolean isUntargetable = false;
 
+    // Other
+    public String currentLocation = "CELENODE"; // where is the character at?
+
     public CharacterAttributes() {
     
     }

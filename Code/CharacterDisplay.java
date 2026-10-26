@@ -9,6 +9,8 @@ public class CharacterDisplay {
     public JLabel username = new JLabel("USERNAME PLACEHOLDER", SwingConstants.CENTER);
     private CharacterMovement stats; // get the characterMovement stats
 
+    private Font customFont = FontLoader.loadCustomFont("/assets/font/GrapeSoda.ttf", 16f);
+
     public int characterWidth = 30, characterHeight = 60; // character width and height (px)
 
     public void characterDisplay(JFrame frame, CharacterMovement stats) {
@@ -19,7 +21,7 @@ public class CharacterDisplay {
         character.setBackground(Color.BLUE); // set character colour
 
         username.setForeground(Color.WHITE);
-        username.setFont(new Font("Times New Roman", Font.BOLD, 12));
+        username.setFont(customFont);
         username.setBounds(0, 0, 100, 20);
         username.setOpaque(true);
         username.setBackground(new Color(0, 0, 0, 120));

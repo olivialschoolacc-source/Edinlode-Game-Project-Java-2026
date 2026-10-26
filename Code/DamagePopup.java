@@ -9,14 +9,17 @@ public class DamagePopup extends JLabel {
     private float alpha = 1.0f;
     private double currentY;
 
+    private Font customFont = FontLoader.loadCustomFont("/assets/font/GrapeSoda.ttf", 16f);
+
     public DamagePopup(JFrame frame, double startX, double startY, int damageAmount, boolean isCrit) {
         setText("-" + damageAmount);
 
+        Font mainFont = customFont.deriveFont(30f);
         if (isCrit) { // if damage is a critical, number colour orange
-            setFont(new Font("Times New Roman", Font.BOLD, 22));
+            setFont(mainFont);
             setForeground(new Color(255, 165, 0));
         } else { // if damage is not a critical and is a normal, number colour red
-            setFont(new Font("Times New Roman", Font.BOLD, 22));
+            setFont(mainFont);
             setForeground(Color.RED);
         }
         

@@ -30,6 +30,7 @@ public class UIDisplay {
     private DashLogic statsDashLogic;
     private InventoryUI inventory;
     private Map map;
+    private Font customFont = FontLoader.loadCustomFont("/assets/font/GrapeSoda.ttf", 16f);
 
     List<JComponent> uiElements = new ArrayList<>();
     
@@ -44,15 +45,16 @@ public class UIDisplay {
         potion = new PotionClass();
         dash = new DashClass(stats);
         inventory = new InventoryUI(frame);
-        map = new Map(frame);
+        map = new Map(frame, stats);
 
+        Font mediumFont = customFont.deriveFont(15f);
         // create health hover box (shows a display of how much health precisely)
         JPanel healthHoverBox = new JPanel();
         JLabel healthLabel = new JLabel();
         healthHoverBox.setBackground(new Color(0, 0, 0, 180));
         healthHoverBox.setSize(80, 25);
         healthLabel.setForeground(Color.WHITE);
-        healthLabel.setFont(new Font("Times New Roman", Font.BOLD, 12));
+        healthLabel.setFont(mediumFont);
         healthHoverBox.add(healthLabel);
         healthHoverBox.setVisible(false);
 
@@ -62,7 +64,7 @@ public class UIDisplay {
         manaHoverBox.setBackground(new Color(0, 0, 0, 180));
         manaHoverBox.setSize(80, 25);
         manaLabel.setForeground(Color.WHITE);
-        manaLabel.setFont(new Font("Times New Roman", Font.BOLD, 12));
+        manaLabel.setFont(mediumFont);
         manaHoverBox.add(manaLabel);
         manaHoverBox.setVisible(false);
 
@@ -92,15 +94,16 @@ public class UIDisplay {
         uiElements.add(potion);
         uiElements.add(dash);
 
+        Font smallFont = customFont.deriveFont(30f);
         // quantity label for the potion orb
         JLabel potionQtyLabel = new JLabel();
         potionQtyLabel.setForeground(Color.WHITE);
-        potionQtyLabel.setFont(new Font("Times New Roman", Font.BOLD, miniOrbSize / 4));
+        potionQtyLabel.setFont(smallFont);
 
         // quantity label for the dash orb
         JLabel dashQtyLabel = new JLabel();
         dashQtyLabel.setForeground(Color.WHITE);
-        dashQtyLabel.setFont(new Font("Times New Roman", Font.BOLD, miniOrbSize / 4));
+        dashQtyLabel.setFont(smallFont);
 
         // set the logics (actual functions for making it work)
         this.statsPotionLogic = new PotionLogic(potion, stats, potionQtyLabel, frame);

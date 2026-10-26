@@ -9,6 +9,7 @@ import java.util.Map;
 
 import Code.UIDisplay;
 import Code.CharacterDisplay;
+import Code.FontLoader;
 
 public class InventoryUI {
 
@@ -34,6 +35,8 @@ public class InventoryUI {
     public JPanel extra1Panel; // 14, for an extra (tba)
     public JPanel extra2Panel; // 15, for an extra (tba)
     public JPanel pet; // 16, for a pet (for item pickup)
+
+    private Font customFont = FontLoader.loadCustomFont("/assets/font/GrapeSoda.ttf", 12f);
 
     public Map<String, JPanel> itemPanels = new Hashtable<>(); // collection of all item panels
 
@@ -101,7 +104,7 @@ public class InventoryUI {
 
             // set the labels for each slot
             JLabel label = new JLabel("<html><center>" + slotName.replace(" ", "<br>") + "</center></html>", SwingConstants.CENTER);
-            label.setFont(new Font("Times New Roman", Font.PLAIN, 9));
+            label.setFont(customFont);
             label.setForeground(Color.WHITE);
             label.setBounds(2, 2, slotSize - 4, slotSize - 4);
             slotPanel.add(label);
@@ -127,7 +130,7 @@ public class InventoryUI {
         // label for the character (just a placeholder, later goes username)
         JLabel previewLabel = new JLabel("Character", SwingConstants.CENTER);
         previewLabel.setForeground(Color.WHITE);
-        previewLabel.setFont(new Font("Times New Roman", Font.BOLD, 10));
+        previewLabel.setFont(customFont);
         characterPreviewPanel.add(previewLabel);
 
         characterPanel.add(characterPreviewPanel); // add to screen
