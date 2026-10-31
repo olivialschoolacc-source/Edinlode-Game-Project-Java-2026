@@ -1,0 +1,205 @@
+CELENODE {
+    LOCATION: northwest of Edinlode,
+    PEOPLE: people are called Celenish,
+    CULTURE: [
+        has very skilled sorcery with cold magic. Celenish people all know the basics of cold magic and experts
+        even go as far to teach in the best cold magic universities of Edinlode. The most popular case is the Frigidus
+        College, where all the professors of the school are from Celenode. There are slight rumors that the school
+        does not accept to hire non-Celenish people in the first place, which is likely false, considering it is very
+        true that no other region beats Celenish people in the art of cold magic.
+        ]
+    AREAS: [
+        Djila Tower: {
+            in the furthermost corner in the southwest of Celenode is a small pocket of space surrounded by
+            tall icy mountain peaks titled Djila. In the center lies the Djila Tower, a tower habited by the past generations
+            of cold magic masters with the title of witches and wizards. These witches and wizards, although being masters
+            of cold magic, do not move to teach in schools, and instead stays in Celenode to research and continue the line
+            of blood of the witches and wizards. These masters have access to the top secret magic spells for those officially
+            titled witches and wizards.
+        }
+        Equix Nawflots: {
+            Just a slight bit north of the Great Mountains of Plia is the capital city of Celenode. In this city is the castle
+            of the generational and historical royals' bloodline. This city is the most alive of all cities, and is the center
+            of all development that happens in Celenode. The downside to this is that travelling to the capital from other
+            towns and cities is of overpriced transportations, and because most commoners only know the basic daily life magic,
+            they cannot fight against the monsters that block the direct paths to the capital. This only leaves the choice to
+            dream about reaching the capital one day for those who were not born there.
+        }
+        Klinde Bay: {
+            A bit to the northeast of the capital lies a big town with the name Klinde Bay. Here, the transportational dragons
+            to the floating island takes flight. The people of Klinde bay are dragon riding masters who prioritizes mastering
+            cold magic purely for controlling the ice dragons of Celenode. Yet the unfortunate part of these people are that
+            these Celenish dragons are legally not permitted to leave certain areas for safety concerns after a dragon nearly
+            broke down the castle in the capital. And the dragons in Klinde Bay are not trained to fight, therefore these
+            dragons cannot be used for battle and only for transportation.
+        }
+        The Floating Island: {
+            This island does not have a proper name. It is called the Floating Islands for the simple reason that it is an
+            island that floats. Anybody can really go up there as long as they have enough money to pay for the dragon ride
+            at Klinde Bay. Above the island is one big castle-like building which is a university that consists of three
+            different sectors. One for dragon flying, one for cold magic mastery, and one for recordkeeping and scribe
+            training.
+        }
+        Cfella: {
+            The only other area in Celenode where a dragon is legally permitted. The Cfella House is the main control unit
+            of this town, and is the only house that owns a dragon breeding farm. From here, all of the dragons are born
+            and sold to Klinde Bay and other dragon riding individuals.
+        }
+        Orvidam: {
+            A small refugee camp which is also under control of the Cfella House.
+        }
+        Prostuu Harbor: {
+            The only harbor of Celenode which is responsible for the import and exporting of goods from and to other regions.
+            This city is owned by the Prostuu House, who have strong lineage of scribes. The people of the Prostuu house
+            prioritize scribe education over any other, and mainly focus on further sea research and trades across water.
+            This city is the second largest city of Celenode after the capital, and is also a big goal for those who wish for
+            a cityscape from the towns.
+        }
+    ]
+    CURRENT ISSUES: [
+        More Harsh Weathers: {
+            As the cold gets more severe over time, gathering resources and researching gets difficult to pursue. This may be
+            because the magical orb created by Frosten 600 years ago is started to fade away in power...
+        }
+        Enemies Start Losing Sanity: {
+            Another effect of the harsh weathers is the enemies that guard the paths to and from towns and cities are starting
+            to go insane. They start becoming overpowered and more uncontrollable over time. This makes travelling safely among
+            areas very dangerous and more expensive.
+        }
+        Dark Magic Wielder on Loose: {
+            There is a magic wielder with a cold magic mastery on the loose. This wizard is using the magic for evil purposes,
+            and is the highest possibility to the weakening of Frosten's sealing orb.
+        }
+    ]
+    CHARACTERS: [
+        Karsen Celen III: the king of Celenode
+        Mira Celen: the queen of Celenode
+        Jude Celen: the crowned heir of Celenode
+        Krys Provit: the dark magic wielder on loose
+        FURTHER UPDATES AVAILABLE
+    ]
+}
+
+FELENA: {
+    LOCATION: to the south of Celenode
+    PEOPLE: people ara called Felenian
+    CULTURE: [
+        Very strong suit in nature. As they live in trees, they have adapted to all sorts of dangers natural happenings give,
+        and they are very reliable when it comes to the knowledge about plants. Their high knowledge for plants give them a
+        dangerous trait: mastery in poison. They have a wide range of land and have great accesibility to other regions,
+        helping their resource collection and research based on the poison and toxin making techniques. Though because their
+        land is so big and there are plenty of towns and villages in unfortunate states, only the rich have the chance to
+        be educated with these poison alchemy techniques.
+    ]
+    AREAS: [
+        Onixya: {
+            Above the Merchi Lake is a popular university campus that mainly focuses on alchemy for poison making and poison
+            curing, as well as informations about toxic plants and often times healing as well are offered. This university
+            is the most reccomended campus out of all others if you are willing to learn poison alchemy in the lands of poison.
+        }
+        Pondokarrad: {
+            A small town that consists of tall trees which all have treehouses mounted on them. Being right below the Great
+            Mountains of Plia, this town is a slight bit chillier than the other areas and offer a great environment to grow
+            plants that can only be found in cold regions.
+        }
+        Jerstad: {
+            A lonely tree standing beside the Merchi Lake which belongs to the Jersti House. The Jersti House does not focus
+            their education on poison, but rather healing. They research about healing bodies rather than harming them, and all
+            professors under the healing department in Onixya are either people of the Jersti House or rich individuals who paid
+            to be educated by the direct sources themselves.
+        }
+        Minnditad: {
+            An expansion of the Jersti House's research units. This is a small camp that has started to become used to a town
+            system which brings technology over from Onixya and Jerstad to pursue research in the river.
+        }
+        Foilo: {
+            A giant tree stump which has a whole entire underground town. This town focuses on food, having the best chefs of
+            Edinlode and a popular street food vending alley with many vendors and diverse food, even from different regions as
+            well, making it a cheaper alternative for those who wish to experience a new region's cuisine without needed to cross
+            rivers and seas.
+        }
+        May Hays: {
+            The capital city of Felena, Merchi. Located to the east of the Merchi Lake, which was named after the castle. May Hays
+            is also a center point for all sorts of systems. Importing and Exporting to other regions is done at the harbor that
+            faces Jestemex, and all the lower-ranked university and educational institudes are also collectively located in
+            May Hays.
+        }
+        Lestergat: {
+            Another lonely tree takes place just a slight bit south of May Hays, owned by the Lestergat Family. This family is an
+            expansion of the royal family, but the only reason why they are split is because they had different educational values.
+            The Lestergat family valued diverse scribe education and recordkeeping which contrasted the violent and protective
+            nature of the royal family, who needed more destructive power of the poison alchemy educations for battle. There is no
+            cracks in the relationship among them and they are not foes of each other, but the split gives an effective system for
+            research and resource collection, which happens in Lestergat, and these information gets sold or transported to other
+            areas of Felena.
+        }
+        Piancho: {
+            A research camp expansion from the Lestergat Family.
+        }
+        Yul Shak: {
+            A vast jungle of tall trees and treehouses. This town is quite unique, as it is run by a mafia. The Yul Family has been
+            a strong mafia force since centuries before, and only recently did they earn the trust to take control over Yul Shak.
+            So far, the control is going smoothly, as the Yul Family's only uses of violence has always been to enemy mafias and
+            not commoners. The town has actually reduced in crime and violence since the mafia took over, and is showing a clear
+            positive impact.
+        }
+        Klimindit: {
+            A giant city under one of the two largest boulders in Felena. Felenians who live under this rock has adapted to the
+            darkness and have developed quality technology of resource collection in mines and more rocky environments that
+            contrast the soft nature environments.
+        }
+        Posodat: {
+            The most dangerous area in all of Felena. Maybe even Edinlode if we do not count the deadlands. This giant lake is
+            filled with pure toxic poison that can easily kill a man with less than a minute of exposion to the gas it makes.
+            A famous issue was when the serial killer that roamed around Daster back 200 years ago was rumored to have thrown
+            away the bodies of the victims into this acid pool and it removed the evidence entirely.
+        }
+        Daster: {
+            This town is the land of the criminals and the jungle of crime. Being the town farthest away from any royal control,
+            anybody from Daster automatically gets a stereotypical eye of being a criminal, which is also likely true, as 97%
+            of all of Felena and Kiandle's mafia crew start off in Daster. This town has been such a disgrace to the image of
+            Felena, that 50 years back, the crown decided to remove its locational marking entirely from the map.
+        }
+        Kii: {
+            A forest town owned by the Kii House. Simply just another town, nothing quite special except for the fact that the
+            Felenians in Kii have a free access trip to the giant sword in the middle of the Merchi Lake every year if you are
+            underage and a student.
+        }
+        Iquonder: {
+            A city owned by the two most wealthiest houses: the Iquond House and the Kii House. The Iquond house has the full
+            control and ownership over the dragon breeding farm and flight related suppplies as well as the Clestian Fields for
+            flight practicing. Meanwhile, the Kii House has full control and ownership over the giant sword in the center of the
+            Merchi Lake and the forest town of Kii.
+        }
+        The Giant Sword: {
+            A gift to the Kii house's duke from 800 years back which was given from the duke's lover who was Jestemexi. The
+            transportation fee to get to the center of the Merchi Lake is pricy but the people of Kii and Iquonder get free
+            trips every year. Legends say touching the sword gives a healthy and safe environment for up to a year.
+        }
+    ]
+    CURRENT ISSUES: [
+        Mafia War: {
+            Recently, a strong mafia force from Daster has challenged a mafia force in Kiandle, and is about to break into war
+            with them. This war could greatly disturb the relationship between the two regions and trade routes to the regions
+            around it.
+        }
+        Professor Eliminations: {
+            A illegal gangster group from Daster has started kidnapping and killing off the valued professors of an unpopular
+            college campus. A letter to the crown says their next target is Onixya, but currently there is too much to lose...
+        }
+        Posodat Cleansing: {
+            The acid pool in Posodat has truely intrigued many researchers of Felena. If there was a safe way to retrieve the
+            materials from Posodat and maybe even cleanse the dangerous poison pool...
+        }
+    ]
+    CHARACTERS: [
+        Chauve Felen: the king of Felena
+        Paula Felen: the queen of Felena
+        Vars Felen: the crowned prince of Felena
+        Nicky Lestergat: the duchess of the Lestergat Family
+        Yaf Yul: the mafia boss of the Yul Family
+        Dennis Osof: the mafia boss of the Osof Family (the mafia attacking Kiandle)
+        Notra Puuvba: headmaster of Onixya
+        FURTHER UPDATES AVAILABLE
+    ]
+}
