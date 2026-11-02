@@ -17,7 +17,21 @@ Inventory (I to turn on and off)
 Map (should open to Celenode; right click to go back (zoom out) of the map and left click labels to enter that map)
 Currently no attack systems made, no save systems made, still in production.
 
-(to play the release)
-download the Zip, click open the executable file, and the app should open. Only for windows. Is not compressed into a single file so the file must stay in the folder.
-(to launch the code version)
-download the folders, move them under one universal folder, launch Main.java.
+### 🔧 Installation Instructions (Multi-part Download)
+Due to GitHub's file size restrictions, this release is split into separate parts. 
+
+1. **Download all `.part` files** (`part0` through `part5`) into the exact same folder on your computer.
+2. Open **PowerShell** in that folder (Shift + Right-click in the folder -> *Open PowerShell window here* or *Open in Terminal*).
+3. Run the matching command below for your operating system to combine them:
+
+#### For Windows 11 (Fastest):
+```powershell
+cmd /c "copy /b Edinlode 1.0.0-alpha.3.zip.part* Edinlode_Full.zip"
+```
+
+#### For Windows 10:
+```powershell
+Get-Content "Edinlode 1.0.0-alpha.3.zip.part*" -AsByteStream | Set-Content "Edinlode_Full.zip" -AsByteStream
+```
+
+4. Once finished, a new file named **`Edinlode_Full.zip`** will appear. Right-click it and extract it normally to play!
