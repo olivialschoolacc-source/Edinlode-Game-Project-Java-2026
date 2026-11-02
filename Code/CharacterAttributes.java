@@ -4,7 +4,14 @@ import java.util.Map;
 
 public class CharacterAttributes {
     // Core Stats
+    public int maxLevel = 200; // value; the max level of the character
     public int level = 0; // value; the level of the character
+    public int skillPoints = 0; // value; how many skill points does the character have?
+    public int mastertyLevels = 0; // value; how many mastery levels does the character have?
+    public String playerClass = ""; // string; the class of the character (Warriror, Arcanist, Fire Wielder, etc...)
+    public String mainAcademyCourse = ""; // the player's main academy course
+    public String subAcademyCourse1 = ""; // the player's sub academy course 1
+    public String subAcademyCourse2 = ""; // the player's sub academy course 2
     public double exp = 0.0; // value; how much experience does the character have?
     public double maxExp = 100.0; // value; how much experience does the character need to level up?
     public int strength = 0; // 0.01% damage per 1 point
