@@ -17,6 +17,8 @@ Inventory (I to turn on and off)
 Map (should open to Celenode; right click to go back (zoom out) of the map and left click labels to enter that map)
 Currently no attack systems made, no save systems made, still in production.
 
+The lore.json was originally a txt file for easy creation, yet I changed it into a json to proceed with my original idea of recalling the information from the json file into an in-game tutorial book, if you know those like... history(?) books in maplestory where they tell you backstreet of towns and stuff—thats gonna be recalled from in the lore.json file.
+
 ### 🔧 Installation Instructions (Multi-part Download)
 Due to GitHub's file size restrictions, this release is split into separate parts. 
 
