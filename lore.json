@@ -1,0 +1,807 @@
+CELENODE {
+    LOCATION: northwest of Edinlode,
+    PEOPLE: people are called Celenish,
+    CULTURE: [
+        has very skilled sorcery with cold magic. Celenish people all know the basics of cold magic and experts
+        even go as far to teach in the best cold magic universities of Edinlode. The most popular case is the Frigidus
+        College, where all the professors of the school are from Celenode. There are slight rumors that the school
+        does not accept to hire non-Celenish people in the first place, which is likely false, considering it is very
+        true that no other region beats Celenish people in the art of cold magic.
+        ]
+    AREAS: [
+        Djila Tower: {
+            in the furthermost corner in the southwest of Celenode is a small pocket of space surrounded by
+            tall icy mountain peaks titled Djila. In the center lies the Djila Tower, a tower habited by the past generations
+            of cold magic masters with the title of witches and wizards. These witches and wizards, although being masters
+            of cold magic, do not move to teach in schools, and instead stays in Celenode to research and continue the line
+            of blood of the witches and wizards. These masters have access to the top secret magic spells for those officially
+            titled witches and wizards.
+        }
+        Equix Nawflots: {
+            Just a slight bit north of the Great Mountains of Plia is the capital city of Celenode. In this city is the castle
+            of the generational and historical royals' bloodline. This city is the most alive of all cities, and is the center
+            of all development that happens in Celenode. The downside to this is that travelling to the capital from other
+            towns and cities is of overpriced transportations, and because most commoners only know the basic daily life magic,
+            they cannot fight against the monsters that block the direct paths to the capital. This only leaves the choice to
+            dream about reaching the capital one day for those who were not born there.
+        }
+        Klinde Bay: {
+            A bit to the northeast of the capital lies a big town with the name Klinde Bay. Here, the transportational dragons
+            to the floating island takes flight. The people of Klinde bay are dragon riding masters who prioritizes mastering
+            cold magic purely for controlling the ice dragons of Celenode. Yet the unfortunate part of these people are that
+            these Celenish dragons are legally not permitted to leave certain areas for safety concerns after a dragon nearly
+            broke down the castle in the capital. And the dragons in Klinde Bay are not trained to fight, therefore these
+            dragons cannot be used for battle and only for transportation.
+        }
+        The Floating Island: {
+            This island does not have a proper name. It is called the Floating Islands for the simple reason that it is an
+            island that floats. Anybody can really go up there as long as they have enough money to pay for the dragon ride
+            at Klinde Bay. Above the island is one big castle-like building which is a university that consists of three
+            different sectors. One for dragon flying, one for cold magic mastery, and one for recordkeeping and scribe
+            training.
+        }
+        Cfella: {
+            The only other area in Celenode where a dragon is legally permitted. The Cfella House is the main control unit
+            of this town, and is the only house that owns a dragon breeding farm. From here, all of the dragons are born
+            and sold to Klinde Bay and other dragon riding individuals.
+        }
+        Orvidam: {
+            A small refugee camp which is also under control of the Cfella House.
+        }
+        Prostuu Harbor: {
+            The only harbor of Celenode which is responsible for the import and exporting of goods from and to other regions.
+            This city is owned by the Prostuu House, who have strong lineage of scribes. The people of the Prostuu house
+            prioritize scribe education over any other, and mainly focus on further sea research and trades across water.
+            This city is the second largest city of Celenode after the capital, and is also a big goal for those who wish for
+            a cityscape from the towns.
+        }
+    ]
+    CURRENT ISSUES: [
+        More Harsh Weathers: {
+            As the cold gets more severe over time, gathering resources and researching gets difficult to pursue. This may be
+            because the magical orb created by Frosten 600 years ago is started to fade away in power...
+        }
+        Enemies Start Losing Sanity: {
+            Another effect of the harsh weathers is the enemies that guard the paths to and from towns and cities are starting
+            to go insane. They start becoming overpowered and more uncontrollable over time. This makes travelling safely among
+            areas very dangerous and more expensive.
+        }
+        Dark Magic Wielder on Loose: {
+            There is a magic wielder with a cold magic mastery on the loose. This wizard is using the magic for evil purposes,
+            and is the highest possibility to the weakening of Frosten's sealing orb.
+        }
+    ]
+    CHARACTERS: [
+        Karsen Celen III: the king of Celenode
+        Mira Celen: the queen of Celenode
+        Jude Celen: the crowned heir of Celenode
+        Krys Provit: the dark magic wielder on loose
+        FURTHER UPDATES AVAILABLE
+    ]
+}
+
+FELENA: {
+    LOCATION: to the south of Celenode
+    PEOPLE: people ara called Felenian
+    CULTURE: [
+        Very strong suit in nature. As they live in trees, they have adapted to all sorts of dangers natural happenings give,
+        and they are very reliable when it comes to the knowledge about plants. Their high knowledge for plants give them a
+        dangerous trait: mastery in poison. They have a wide range of land and have great accesibility to other regions,
+        helping their resource collection and research based on the poison and toxin making techniques. Though because their
+        land is so big and there are plenty of towns and villages in unfortunate states, only the rich have the chance to
+        be educated with these poison alchemy techniques.
+    ]
+    AREAS: [
+        Onixya: {
+            Above the Merchi Lake is a popular university campus that mainly focuses on alchemy for poison making and poison
+            curing, as well as informations about toxic plants and often times healing as well are offered. This university
+            is the most reccomended campus out of all others if you are willing to learn poison alchemy in the lands of poison.
+        }
+        Pondokarrad: {
+            A small town that consists of tall trees which all have treehouses mounted on them. Being right below the Great
+            Mountains of Plia, this town is a slight bit chillier than the other areas and offer a great environment to grow
+            plants that can only be found in cold regions.
+        }
+        Jerstad: {
+            A lonely tree standing beside the Merchi Lake which belongs to the Jersti House. The Jersti House does not focus
+            their education on poison, but rather healing. They research about healing bodies rather than harming them, and all
+            professors under the healing department in Onixya are either people of the Jersti House or rich individuals who paid
+            to be educated by the direct sources themselves.
+        }
+        Minnditad: {
+            An expansion of the Jersti House's research units. This is a small camp that has started to become used to a town
+            system which brings technology over from Onixya and Jerstad to pursue research in the river.
+        }
+        Foilo: {
+            A giant tree stump which has a whole entire underground town. This town focuses on food, having the best chefs of
+            Edinlode and a popular street food vending alley with many vendors and diverse food, even from different regions as
+            well, making it a cheaper alternative for those who wish to experience a new region's cuisine without needed to cross
+            rivers and seas.
+        }
+        May Hays: {
+            The capital city of Felena, Merchi. Located to the east of the Merchi Lake, which was named after the castle. May Hays
+            is also a center point for all sorts of systems. Importing and Exporting to other regions is done at the harbor that
+            faces Jestemex, and all the lower-ranked university and educational institudes are also collectively located in
+            May Hays.
+        }
+        Lestergat: {
+            Another lonely tree takes place just a slight bit south of May Hays, owned by the Lestergat Family. This family is an
+            expansion of the royal family, but the only reason why they are split is because they had different educational values.
+            The Lestergat family valued diverse scribe education and recordkeeping which contrasted the violent and protective
+            nature of the royal family, who needed more destructive power of the poison alchemy educations for battle. There is no
+            cracks in the relationship among them and they are not foes of each other, but the split gives an effective system for
+            research and resource collection, which happens in Lestergat, and these information gets sold or transported to other
+            areas of Felena.
+        }
+        Piancho: {
+            A research camp expansion from the Lestergat Family.
+        }
+        Yul Shak: {
+            A vast jungle of tall trees and treehouses. This town is quite unique, as it is run by a mafia. The Yul Family has been
+            a strong mafia force since centuries before, and only recently did they earn the trust to take control over Yul Shak.
+            So far, the control is going smoothly, as the Yul Family's only uses of violence has always been to enemy mafias and
+            not commoners. The town has actually reduced in crime and violence since the mafia took over, and is showing a clear
+            positive impact.
+        }
+        Klimindit: {
+            A giant city under one of the two largest boulders in Felena. Felenians who live under this rock has adapted to the
+            darkness and have developed quality technology of resource collection in mines and more rocky environments that
+            contrast the soft nature environments.
+        }
+        Posodat: {
+            The most dangerous area in all of Felena. Maybe even Edinlode if we do not count the deadlands. This giant lake is
+            filled with pure toxic poison that can easily kill a man with less than a minute of exposion to the gas it makes.
+            A famous issue was when the serial killer that roamed around Daster back 200 years ago was rumored to have thrown
+            away the bodies of the victims into this acid pool and it removed the evidence entirely.
+        }
+        Daster: {
+            This town is the land of the criminals and the jungle of crime. Being the town farthest away from any royal control,
+            anybody from Daster automatically gets a stereotypical eye of being a criminal, which is also likely true, as 97%
+            of all of Felena and Kiandle's mafia crew start off in Daster. This town has been such a disgrace to the image of
+            Felena, that 50 years back, the crown decided to remove its locational marking entirely from the map.
+        }
+        Kii: {
+            A forest town owned by the Kii House. Simply just another town, nothing quite special except for the fact that the
+            Felenians in Kii have a free access trip to the giant sword in the middle of the Merchi Lake every year if you are
+            underage and a student.
+        }
+        Iquonder: {
+            A city owned by the two most wealthiest houses: the Iquond House and the Kii House. The Iquond house has the full
+            control and ownership over the dragon breeding farm and flight related suppplies as well as the Clestian Fields for
+            flight practicing. Meanwhile, the Kii House has full control and ownership over the giant sword in the center of the
+            Merchi Lake and the forest town of Kii.
+        }
+        The Giant Sword: {
+            A gift to the Kii house's duke from 800 years back which was given from the duke's lover who was Jestemexi. The
+            transportation fee to get to the center of the Merchi Lake is pricy but the people of Kii and Iquonder get free
+            trips every year. Legends say touching the sword gives a healthy and safe environment for up to a year.
+        }
+    ]
+    CURRENT ISSUES: [
+        Mafia War: {
+            Recently, a strong mafia force from Daster has challenged a mafia force in Kiandle, and is about to break into war
+            with them. This war could greatly disturb the relationship between the two regions and trade routes to the regions
+            around it.
+        }
+        Professor Eliminations: {
+            A illegal gangster group from Daster has started kidnapping and killing off the valued professors of an unpopular
+            college campus. A letter to the crown says their next target is Onixya, but currently there is too much to lose...
+        }
+        Posodat Cleansing: {
+            The acid pool in Posodat has truely intrigued many researchers of Felena. If there was a safe way to retrieve the
+            materials from Posodat and maybe even cleanse the dangerous poison pool...
+        }
+    ]
+    CHARACTERS: [
+        Chauve Felen: the king of Felena
+        Paula Felen: the queen of Felena
+        Vars Felen: the crowned prince of Felena
+        Nicky Lestergat: the duchess of the Lestergat Family
+        Yaf Yul: the mafia boss of the Yul Family
+        Dennis Osof: the mafia boss of the Osof Family (the mafia attacking Kiandle)
+        Notra Puuvba: headmaster of Onixya
+        FURTHER UPDATES AVAILABLE
+    ]
+}
+
+ASTRAKIN:
+    LOCATION: The island on the far south of Edinlode
+    PEOPLE: the people are called Astrakin
+NORTH ASTRAKIN: {
+    CULTURE: [
+        The north side of Astrakin has strong beliefs in magic. They have histories of magical research and fantasy lifestyles.
+        The Astrakins on the north side have grudges and are enemies with the south side, who deny the importance of magic.
+        North Astrakin focuses primarily on the physical damage that comes from magical summonings. They learn to summon their
+        spirit animals who fight for them and apply physical damage onto enemies.
+    ]
+    AREAS: [
+        Astran: {
+            The capital of North Astrakin. A giant wooden castle with magical orbs floating around, protecting the castle from
+            outer threats.
+        }
+        Plen Cartos: {
+            Home to The Orb, the core of all protective shields and barriers that keep towns and cities safe. This orb is owned
+            by the wealthies noble house of all of Astrakin, called the Mital House. This orb is also their mansion and they
+            keep control of the orb itself. As it is a giant core foundation for the safety of North Astrakin, this house is
+            very closely monitored by the royals.
+        }
+        Lostos: {
+            Lostos is a small harbor town. The people of Lostos are famous for their dragon riding potential, and they open a
+            yearly dragon riding contest that takes all dragon riders from North Astrakin and put them to a competition.
+        }
+        Mital: {
+            A magical town owned by the Mital House. The Mital Family monitors over the magical fluctuations near the area and
+            focuses on research. Mital is in the perfect land requirements for three different plants that only grow in different
+            conditions to grow together over the seasons. This lets Mital be the perfect place to proceed with research in
+            magical fluctuations and diverse monsters and plants.
+        }
+        Vas: {
+            A camp for research visitors from Felena and Kiandle. This camp is very dangerous to approach without a shield
+            because the toxic gas from Posodat in Felena constantly follows the wind down to Vas. They are constantly getting
+            help from the magical barriers made by The Orb.
+        }
+        Uutra: {
+            A magic wielder college which teaches how to utilize magic into daily life as well as battle. The students here
+            learn summoning their spirit animals and physical weapons for fighting. They do not apply elemental damage but
+            rather physical damage.
+        }
+    ]
+    CURRENT ISSUES: [
+        Astrakin War: {
+            The ongoing war between North and South Astrakin as to who is right in their ways of battle. This war has not been
+            settled for centuries and is starting to ruin the everyday lives of people, and Astrakin is starting to get more
+            and more isolated from the rest of Edinlode.
+        }
+        Fluctuation Intensity: {
+            The intensity of the magical fluctuations are starting to grow out of control, and just physical damage isn't
+            helping as the monsters are adapting to their fighting style and growing resistence against physical damage.
+        }
+    ]
+    CHARACTERS: [
+        Heodis Astran VII: the king of North Astrakin
+        Kieth Astran: the crowned prince of North Astrakin
+        Weste Mital: the head of the Mital House
+        Bohog Mital: the son of Weste, controls the Orb and the fluctuation research projects.
+        FURTHER UPDATES AVAILABLE
+    ]
+}
+SOUTH ASTRAKIN: {
+    CULTURE: [
+        The people of South Astrakin do not believe in the importance of magic. They minimize the use of magic and maximize
+        the use of science and the limits of the human body to apply their physical damages. They are extremely cyber tech
+        based and all of their construction heavily relies on robotics and science knowledge. All buildings are built high
+        off of the ground, making difficult access to anybody trying to attack. They have adapted to the use of scientific
+        technology all around and continue researching the limits of mankind to expand their knowledge without relying on
+        magical resources.
+    ]
+    AREAS: [
+        Astris: {
+            A research camp which sits in front of the sea, so any robots and builds that have been made can be easily
+            tested in an open environment. This camp is owned under the crown and is accessible only to those who have
+            the legal title of a "Robotics Researcher."
+        }
+        Jusnite: {
+            A small training barrack that sits just southwards of the capital. They train armies with the weaponary
+            that have been researched by researchers and learn how to utilize robots. The crown has refused to call
+            it a university but it techinally is an education facility and anybody from other regions (except from
+            North Astrakin) who wishes to learn more about the technical usage of science without relying on magic
+            are welcome.
+        }
+        Cagdis Mialla: {
+            The capital city of South Astrakin. There is a castle made of steel and stone, the strongest standing
+            building in the entirety of South Astrakin. This grand palace has not a single spec of magic in it, and is
+            entirely made of natural resources and from human labour.
+        }
+        Plotavis: {
+            A city of a collecetion of skyscrapers. Owned under the Plotavis House. The Plotavis Family is a key factor in
+            technology research of robotics.
+        }
+        Chind: {
+            A giant research facility building owned half by the Miikas House and half by the royal crown. This giant facility
+            has all high-end researchers actively working on discovering new knowledge and also serves as a research university
+            for students who wish to proceed with learning more about robotics and researching modern cyber technology.
+        }
+        Kerth: {
+            An island that has full control over all of the other islands to the east. The Kerth House is a neutral force
+            that does not side with neither the north or the south of Astrakin and is a fully independant city. The Kerth
+            Family is like the royal crown of the islands but without an official title, and the entire city is located
+            in a giant magical cherry blossom tree which does not die with whatever weather conditions or seasons. The
+            Kerth House, as they are a neutral force, do not participate in any wars between Astrakin AND the rest of
+            Edinlode. An easy comparison to real-life would be Switzerland.
+        }
+    ]
+    CURRENT ISSUES: [
+        Astrakin War: {
+            The ongoing war between North and South Astrakin as to who is right in their ways of battle. This war has not been
+            settled for centuries and is starting to ruin the everyday lives of people, and Astrakin is starting to get more
+            and more isolated from the rest of Edinlode.
+        }
+        Dark Hacker: {
+            A group of well-educated hackers have been hacking into the government-controlled robots and making them evil. These
+            robots have been out loose in the pathways to different cities and towns and it is starting to get really hard to
+            move around without having expert combat knowledge.
+        }
+    ]
+    CHARACTERS: [
+        Pocksa Mialla: the king of South Astrakin
+        Kestras Mialla: the queen of South Astrakin 
+        Jehan Mialla: crowned princess of South Astrakin
+        Becky ???: the leader of the Dark hackers
+        Professor Gege: the headmaster of Jusnite
+        Professor Helen: the headmaster of Chind
+        Dr. Nii: the head researcher of Chind
+        Anabelle Knill: A small child from Plotavis with extraordinary knowledge of robotics
+        FURTHER UPDATES AVAILABLE
+    ]
+}
+
+PLOVIQUE: {
+    LOCATION: the northeast desert of Edinlode
+    PEOPLE: Ploviquean
+    CULTURE: [
+        Very well developed underground construction technologies, as the hot weather is a difficulty for survival above ground.
+        Ploviquean builders and constructors are most valued all across Edinlode. Plovique has a strong suit in lightning magic.
+    ]
+    AREAS: [
+        Plavique Harbor: {
+            The main harbor that accesses all other regions of Edinlode through the river. With two tall skyscrapers made of
+            limestone and sandstone, it withstands the sandstorms that hits it. These two towers are the primary resource
+            warehouse and a watchtower over the Great Desert Borders.
+        }
+        Loask: {
+            A large oasis. But it's toxic, electrified water. Not drinkable, not touchable. And this water becomes a hologram
+            during the night, giving false hope for those lost in the desert.
+        }
+        Karvis: {
+            A research facility placed at the northwest of Plovique. Here are most of the high-end Ploviquean researchers who
+            constantly study about the desert they live in day and night. This research facility is owned by the Jainska Family.
+        }
+        Plavique city: {
+            A capital-like non-capital city owned by the crown. This city is purely a residential area.
+        }
+        Jainska: {
+            Home to the Jainska House. The jainska family strongly prioritizes scribe work and research work over battle and
+            violence. This town is the main place in Plovique where dragon riders and sailors practice their skills.
+        }
+        Munii Fahes: {
+            The capital and castle of Plovique. This giant double-pyramid is the landmark of Plovique and the castle of the
+            royal house. This castle is covered in electrical current and the top flipped pyramid is held up by the electrical
+            bonding.
+        }
+        Lyo: {
+            The dragon's den. Here is the hatching grounds of all sand dragons and is owned by the Cerkais House.
+        }
+        Cerkais: {
+            The richest noble house in Plovique, owning the dragon's den and all of the dragons inside. They sell these dragons
+            to riders for profit, and also teach dragon riding for extra tutor money.
+        }
+    ]
+    CURRENT ISSUES: [
+        Sandstorm Intensity: {
+            The sandstorms that hit the castle intensifies, and the electrical bonding that holds the castle up is weakening as
+            the king remains sick. This may lead to the fall of the castle very soon...
+        }
+        Hologram Monsters: {
+            The monsters near Loask are starting to get affected by the holographic lake water, and are also starting to turn
+            holographic. These enemies are now harder to target and harder to find as they fade into the air and away from
+            human vision.
+        }
+        Research Facility Attacks: {
+            Monsters are getting attracted from the magical field in the Research Facility in Karvis and is starting to attack
+            the facility, giving strong damage to the researchers and all of the resource that has been collected.
+        }
+    ]
+    CHARACTERS: [
+        Shaur Plavique V: the king of Plovique
+        Mariia Plavique: the queen of Plovique
+        Progdis Killian: the crowned prince of Plovique
+        Jennine Killian: the arranged partner of Progdis
+        Sofie Lulu: the woman Progdis is having an affair with
+        Dr. Cornelius: The head researcher in Karvis.
+        Shiema Stanis: A strong lightning wielder adventurer
+        FURTHER UPDATES AVAILABLE
+    ]
+}
+
+JESTEMEX: {
+    LOCATION: the red desert to the south of Plovique
+    PEOPLE: Jestemexi
+    CULTURE: [
+        Known as the land of fire and forgery, Jestemexi People have a strong suit it fire control and forging weapons and armor.
+        The best blacksmiths and weaponsmiths are born in Jestemex and raised in Jestemex. Jesemexis are not strong in battle
+        itself but are definitely strong in creating tools for battle. Battle is done in the royal army and nowhere else. Even
+        while in the same region, blacksmiths all over Jestemex are rivals with eachother. Every year, they hold a blacksmith
+        contest to determine which area has the best blacksmith of the year.
+    ]
+    AREAS: [
+        Boonds: {
+            A ruin that was burnt down by a strong fire dragon a few hundred years back. Nobody finds these ruins but one strange
+            person who seems to still have a lot of memories to it.
+        }
+        Skiiva: {
+            A small blacksmith town with 2 1st place winners of the annual blacksmith contest in the past 100 years.
+        }
+        Miydav: {
+            A refugee camp.
+        }
+        Ostra: {
+            The capital and castle of Jestemex. The great fire dragon is owned by the crown. The cage-looking building that is
+            containing a fire is the caslte, where the fire is a magical shield that protects the inside from outside danger.
+            The city is a goal for all fire wielders and blacksmiths to visit at least once in their lifetime, as it has many
+            well-paid blacksmiths working under the crown.
+        }
+        Lvois: {
+            A town made by the Lvois House. The Lvois Family was originally from South Astrakin, but moved to jestemex and
+            adapted to the blacksmith and fire wielding nature. Later, they brough the most basic construction techniques of
+            the cyber environment and built a town from that. This town is the most futuristic out of all others in Jestemex.
+        }
+        Kyar: {
+            This town has a giant sword in the Great Ostra Oasis. This sword was a cosmetic made by the crown 700 years back,
+            and was gifted to the Kyar House, who was a secret lover of the king at that time. Until a few hundred years back,
+            this giant sword was thought of to be a nuisence and a symbol of bad luck. But then the real story of why the king
+            had a secret lover was revealed and was accepted by the citizens. From then on, this sword is a symbol of true love,
+            and touching it brings the perfect partner to whoever touched it. At least... that's what it's rumored as.
+        }
+        Svinat: {
+            Another small town of blacksmiths. The Jestemexi here have a stronger suit in wielding fire than forging weapons,
+            yet their precise fire controllability brings them to create the strongest armor used by the royal military.
+        }
+        Yutlina: {
+            A famous town for having the most first place winners of the yearly competition than any other town and city in
+            Jestemex. With a whopping 60 first place winners over the past 100 years, the skill of weaponary clearly shows in
+            the giant anvil that lies in the center of their town. This landmark is highly looked up on by other blacksmiths,
+            as it serves as a giant furnace.
+        }
+        Extsavis Deserts: {
+            A education facility of forgery, where the best forgers (first place winners of the annual competition) work as
+            professors. This college is where all blacksmiths start their education with the starting points of advanced
+            forgery, and later after graduation they return to their hometowns to study more of their family techniques. That
+            is why this college is not popular for those who are not Jestemexi, as they have a limit to how much they can learn.
+        }
+        Vaksho: {
+            Home to where most of Edinlode's magical weapons are forged. Here, less of physical sword-like weapons are forged, 
+            and more of mage books and orbs are forged (or alchemised). The forgers here are skilled in controlling mana and
+            magical fluctuations to infuse their weapons with strong power for any mage wielders.
+        }
+        Unnamed: {
+            This camp has been forgotten for years. The people here now form their own government style ever since the weather
+            conditions on the route to approaching the camp has been harsh and less people started finding it. This town now
+            has the hardest routes to enter and only those with true skill are able to pass the famous 7 boss enemies.
+        }
+    ]
+    CURRENT ISSUES: [
+        Forgotten Camp: {
+            The Unnamed camp has been losing it's existance since enemies in the route to the camp have been getting stronger
+            and since the weather conditions have made anyone who approaches near this town to a demise. But the more this camp
+            gets forgotten, the more weaker the fires of every town and city gets. Maybe there is a hidden device they are hiding...
+        }
+        No More Contests?: {
+            The annual competitions for who forges the best weapon is held in Ostra every year. But lately, the crown has been
+            delaying the competition date. Nobody knows the reason, but it has already been 2 years since the competition was
+            held. At this rate, the competition may even be cancelled forever.
+        }
+        Fire Outage: {
+            Lately, more wind has been blowing from the south. It is thought to be from Bostrog, but there is not really a big
+            proof of where it is. But because of this strong breeze, the fire in the forge and the furnace of Yutlina is going
+            weak.
+        }
+    ]
+    CHARACTERS: [
+        Mecka Jestem II: the king of Jestemex
+        Lois Jestem: the queen of Jestemex
+        Heela Will: the best forger of Skiiva
+        Possak Drave: the best forger of Kyar
+        Yuukiv Sauv: best forger of Yutlina
+        Hedotis Soe: headmaster of Extsavis Deserts college
+        FURTHER UPDATES AVAILABLE
+    ]
+}
+
+KIANDLE: {
+    LOCATION: The plains located south of Jestemex and west of Bostrog
+    PEOPLE: people are called Kianish
+    CULTURE: [
+        Kiandle is a place where a collection of people from different regions collectively bond. This region does not really
+        have a specific set race, and instead, all kinds of people from different regions join to form Kiandle. Therefore all
+        cultures are contained in one region. There are Cold Masters from Celenode, Poison Alchemists from Felena, Summoners
+        from North Astrakin, Technology Developers from South Astrakin, Shadow Wielders from Bostrog and Shielda Islands, Fire
+        Forgers from Jestemex, and Lightning Mages from Plovique, all in one.
+    ]
+    AREAS: [
+        Mailda Plains: {
+            An isolated piece of lands surrounded by the Luseed Heights. Here is where the annual meetings hold place. The
+            annual meeting is called "The Power Meeting" where from each town or city comes the strongest magic wielders
+            to discuss problems that are happening all around Edinlode and how to fix them.
+        }
+        Teeshug: {
+            The home to the Astrakins, both north and south. Here, the Astrakins do not fight against eachother and work
+            together in harmony.
+        }
+        Waquay: {
+            A small camp on the surface where nobody lives. The surface is just a disguise, as underground lies a large village
+            for the Shadow Wielders from Bostrog and the Shielda Islands.
+        }
+        Preres: {
+            Home to all the Jestemexi people, the Fire Forgers. All of the battle weapons are generated here, and is also home
+            to a rich family called the Pres Family. This family gladly spreads any forging related information to the students
+            who wish to learn, and they focus deeply in the art of weaponary, not just functionality. They love an aesthetic
+            weapon.
+        }
+        Plinde: {
+            This is where all the Ploviqueans live. These sandy and electrical mages have build a round arena to show off their
+            lightning wielding skills from time to time. They are the main electrical source who spread the required research
+            power sources to the research center above.
+        }
+        Yokosh: {
+            Home to the Felenians. Felenians here farm and grow plants to serve food to the other towns. Here they also create
+            medicine and poison potions. Yokosh is also the habitat of the strongest mafia force of Kiandle.
+        }
+        Jorta: {
+            Jorta is the research center for all the Celenish people. These icy Cold Masters create freezing below zero
+            enviroments to research more about the weapons made in Preres's durability. This testing process is the reason to 
+            such strength in the weapons created by the Jestemexi.
+        }
+    ]
+    CURRENT ISSUES: [
+        Mafia War: {
+            Recently, a strong mafia force from Felena has challenged a mafia force in Yokosh, and is about to break into war
+            with them. This war could greatly disturb the relationship between the two regions and trade routes to the regions
+            around it.
+        }
+        Wildfires?: {
+            Because Kiandle is located on a grassy plain environment, unlike Jestemex with red sand, the forging and fire wielding
+            happening in Preres is starting to cause wildfires around them, burning the trees down to ashes and creating new
+            monsters.
+        }
+        Disturbed Annual Meetings: {
+            The annual meetings happening in the Maila Plains have been getting delayed and even cancelled for the past 5 years.
+            This is because more monsters have been travelling over the Bostrog Borders and into the route to the Plains, creating
+            a barrier for transportation.
+        }
+    ]
+    CHARACTERS: [
+        Feyfey Kangnish: The representative of Teeshug for North Astrakin
+        Nina Andres: The representative of Teeshug for South Astrakin
+        Juda Pocko: The representative of Waquay for Bostrog
+        Linda Zdrack: The representative of Waquay for Shielda Islands
+        Malish Henson: The representative of Preres
+        Wilson Stone: The representative of Plinde
+        Vickson Xillian: The representative of Yokosh
+        Zoey Clarck: The representative of Jorta
+        FURTHER UPDATES AVAILABLE
+    ]
+}
+
+BOSTROG: {
+    LOCATION: The mountain-surrounded deadlands to the southeast of Kiandle.
+    PEOPLE: The people are called Bostrogian
+    CULTURE: [
+        Bostog is one of the regions of the Lost Sea, also known as the deadlands. Here, the shoadow wielders focus on necromancy.
+        They summon beings from shadows and are more centered around battle. With the border mountains splitting Bostrog up into
+        north and south, the southern part is also split into Northern kardt and Southern Kardt.
+    ]
+    AREAS: [
+        Pongt: {
+            A normal residential town.
+        }
+        Chaills: {
+            Another residential town owned by the Chaills House. The Chaills Family is a family of famous shadown wielders over
+            centuries of history.
+        }
+        Jendat City: {
+            The capital city of Bostrog, and the castle of Bostrog. Here are the most famous shadow wielders working under the
+            royal army and summoning their summons to protect the castle from outer threats. Jendat City also has the largest
+            harbor of The Lost Sea, yet it only moves to Shielda Islands and back, without visiting other regions.
+        }
+        Tian: {
+            The largest shadow wielder college in Edinlode, the only, and the best. The only downside is that this school only
+            accepts students from the regions of the Lost Sea to enter. In history, only one non-Lost Sea person has joined. This
+            college teaches necromancy and summoning skills using shadows.
+        }
+
+    ]
+    CURRENT ISSUES: [
+        Isolation: {
+            The isolation of the regions of the Lost Sea have been getting way too big. Now, it seems Bostrog and Shielda Islands
+            are way behind on technology, and more people are wanting to leave the region. Is there a way to open the only
+            connection they have to the outer world..?
+        }
+        Dark Necromancer: {
+            A necromancer is wandering around Bostrog and summoning more shadow monsters. These monsters are getting out of
+            control and now they are raiding towns.
+        }
+        Strong Breeze: {
+            Every winter, a strong storm crashes against Jendat City to all the way past Bostrog. These storms are way past just
+            breezy, and are damaging the towns in its way, and even towns across the Bostrog Borders like Yutlina in Jestemex. 
+        }
+    ]
+    CHARACTERS: [
+        Carlos Bostrogii III: the king of Bostrog
+        Helen Bostrogii: the queen of Bostrog
+        Tarn Bostrogii: the crowned prince of Bostrog
+        Professor Gus: the Necromancy and Summons professor in Tian
+        Professor Lia: the Necromancy and Summons professor in Tian
+        Professor Louis: the Art of the Deads and Destruction professor in Tian
+        FURTHER UPDATES AVAILABLE
+    ]
+}
+
+SHIELDA ISLANDS: {
+    LOCATION: the small collection of islands in the Lost Sea, south of Bostrog.
+    PEOPLE: the people are called Shieldi
+    CULTURE: [
+        Another deadland biome, and also a very isolated island. Mostly a dungeon based island with more dungeons and monster
+        plains than residential areas. Here lie the most scariest shadow monsters and the most reliable and strong shadow wielders
+        who face against them. It is not an exaggeration to say the warriors in Shielda Islands are the strongest in all of
+        Edinlode, as they defeat more than just their own kind. They have mastered not just necromancy and summoning, but also
+        shadow wielding and void magic. These mages are the best of their kind. And only those who are the best out of their kind
+        can dare step into Shielda Islands, the region of doom and shade. The isolated of them all.
+    ]
+    AREAS: [
+        Shielda City: {
+            The main residential area where all warriors live. The forever living beings guard as the crown, not quite a crown, but
+            enough power and control to take care of a group of people. This city lacks in technology and is purely focused in
+            battle and training, the lair of warriors.
+        }
+        Shag Plots: {
+            Another residential area for the warriors, except here is really minimal. No buildings, just tents. No ruler, just
+            empty training grounds. Here are all of the strongest shadow wielders, adventuring the high rank dungeons and far beyond
+            the deadlands and the Lost Sea. Their harbor leads them into the deep ocean, far into the fog and the unknown.
+        }
+    ]
+    CURRENT ISSUES: [
+        Dungeon Hordes: {
+            More high-level dungeons have been appearing, and they have been overflowing. The monsters from the overflowed dungeons
+            have taken over the above-ground plains, outside of their dungeons. This is making travel way dangerous, and the lacking
+            of great warriors who have successfully entered Shielda Islands is not helping the multitaskability with multiple focus
+            points.
+        }
+        Never-Ending Dungeons: {
+            Dungeons give out power to those who defeat it. And the power is stored in diamonds. These Power Diamonds are what gets
+            warriors to their limit. Any warrior who seeks ultimate power will find Shielda Islands and their dungeons to advance
+            themselves.
+        }
+    ]
+    CHARACTERS: [
+        ???
+    ]
+}
+
+ATLANTIPES: {
+    LOCATION: underwater in the Kiandle Sea, south of Kiandle and east of Astrakin
+    PEOPLE: no residents
+    CULTURE: [
+        This underwater region is an enemy filled battleground. But if anybody is brave enough to pursue past them, they will reach
+        the portals to elemental colleges. These are the final education routes taken only by those who wish for perfection and
+        mastery in their element.
+    ]
+    IN-GAME SYSTEMS: [
+        Once a character hits level 150, they have the chance to enter an elemental academy to master their element.
+        Classes:
+            - Cold Wielder (Celenode start) can go into {
+                all Frost Academy courses except infusions (choose 1 main and 2 sub)
+                they control the weather into blizzards, summon golems, and 
+            }
+            - Lightning Mage (Plovique start) can go into {
+                all Bolt Academy courses except infusions (choose 1 main and 2 sub)
+                they buff speediness of allies and debuff movability of enemies, electrocute and deal direct electrical damage
+            }
+            - Poison Alchemist (Felena start) can go into {
+                all Toxin Academy courses except infusions (choose 1 main and 2 sub)
+                they focus on alchemy and toxins, yet they also have good skills in healing and protecting
+            }
+            - Fire Wielder (Jestemex start) can go into {
+                all Blaze Academy courses except infusions (choose 1 main and 2 sub)
+                they can control fire and wield fire, as well as defend their allies and themselves with fire shields
+            }
+            - Shadow Wielder (Bostrog start) can go into {
+                all Void Academy courses except infusions (choose 1 main and 2 sub)
+                they can be a void wielder, a shadow wielder, or a necromancer. void wielders create summons, shadow wielders give direct shadow
+                damage, and necromancers revive enemies they killed or sacrifice their own health for higher damage
+            }
+            - Arcanist (North Astrakin start) can go into {
+                any elemental infusion courses (choose 1 main infusion and 2 sub infusions)
+                they infuse elements into their weapons they summon and deal elemental damage along with physical damage
+            }
+            - Warrior (South Astrakin start) can go into {
+                any elemental physical arts courses (choose 1 main buff/defense and 1 sub buff/defense, and 1 sub physical arts)
+                they tank damage and also deal damage, being an entirely melee class, they can choose one elemental physical arts class to sub in
+                some extra damage.
+            }
+
+        From level 150 to 200, players have a chance to learn new skills and builds along with the increasing levels.
+    ]
+    AREAS: [
+        Temple Of Beginning: {
+            In the center of the region stands a giant, tall temple which looms over anybody below. Anybody who comes into
+            Atlantipes will start here, before they find their own ways to the Elemental Portal of their wanting. But the way to the
+            Elemental Portals are indeed brutal and terrifying, and only those who truely wish for mastery will succeed.
+        }
+        The Portal of Frost: {
+            The Elemental Portal which leads to the Frost Academy. In this academy, students will learn how to master cold wielding
+            and other talents and skills to empower themselves with this element.
+        }
+        The Portal of Blaze: {
+            The Elemental Portal which leads to the Blaze Academy. In this academy, students will learn how to master fire wielding
+            and other talents and skills to empower themselves with this element.
+        }
+        The Portal of Toxins: {
+            The Elemental Portal which leads to the Toxin Academy. In this academy, students will learn how to master poison wielding
+            and alchemy, along with other talents and skills to empower themselves with this element.
+        }
+        The Portal of Void: {
+            The Elemental Portal which leads to the Void Academy. In this academy, students will learn how to master shadow wielding,
+            summoning, and necromancy, along with other talents and skills to empower themselves with this element.
+        }
+        The Portal of Bolt: {
+            The Elemental Portal which leads to the Bolt Academy. In this academy, students will learn how to master lightning
+            wielding and other talents and skills to empower themselves with this element.
+        }
+        ACADEMY COURSES:
+        Frost Academy: {
+            Icy Summons: learn how to summon ice and snow creatures to fight alongside you (summoning)
+                Professor Eirwen
+
+            Weather Manipulation: learn how to lower temperatures and control the weather to damage groups of enemies (area damage) 
+                Professor Isolde
+            
+            Frostbite: learn how to apply direct cold damage to enemies (physical arts)
+                Professor Thalric
+
+            Glacial Arts: learn how to strongly debuff enemies (debuff)
+                Professor Vaelis
+        }
+        Blaze Academy: {
+            Fire Spirits: learn how to summon fire and ash creatures to fight alonside you (summoning)
+                Professor Ignatius
+
+            Pyromancy: learn how to manipulate flames and unleash powerful fire attacks (physical arts)
+                Professor Seraphina
+
+            Combustion: learn how to cause explosive bursts of heat to damage groups of enemies (area damage)
+                Professor Draven
+
+            Ashen Resilience: learn how to protect yourself and allies with fire-resistant barries and restorative embers (defense)
+                Professor Aurelia
+        }
+        Toxin Academy: {
+            Venomous Familiars: learn how to summon poisonous creatures to fight alongside you (summoning)
+                Professor Vesper
+
+            Toxicology: learn how to manipulate toxins and inflict debilitating poison effects (physical arts)
+                Professor Sylas
+
+            Plaguecraft: learn how to spread magical afflictions across multiple enemies (alchemy)
+                Professor Morrigan
+
+            Noxious Alchemy: learn how to create antidotes, restorative concoctions, and beneficial chemical buffs and heals (heal & buff)
+                Professor Elowen
+        }
+        Void Academy: {
+            Void Manifestation: learn how to summon entities from beyond the material realm (summoning)
+                Professor Azrael
+
+            Necromancy: learn how to summon shadow creatures from your own kills (necromancy)
+                Professor Lysandra
+
+            Shadow Arts: learn how to apply direct shadow damage to enemies (physical arts)
+                Professor Malachai
+
+            Dimensional Warding: learn how to debuff enemies and buff allies using the energy from enemies (defense, heal & buff)
+                Professor Nyxara
+        }
+        Bolt Academy: {
+            Stormbound Summons: learn how to summon lightning-based creatures to fight alonside you (summoning)
+                Professor Cassian
+
+            Electromancy: learn how to manipulate electricity and the weather and unlease lightning attacks (physical arts)
+                Professor Zephyr
+
+            Static Disruption: learn how to paralyze, interrupt, and debuff enemies with electrical energy (debuff)
+                Professor Stormveil
+
+            Electrokinetics: learn how to enchance allies' movement speed, reflexes, and combat capabilities using electricity (buff)
+                Professor Astra
+        }
+    ]
+}
