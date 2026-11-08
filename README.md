@@ -19,21 +19,4 @@ Currently no attack systems made, no save systems made, still in production.
 
 The lore.json was originally a txt file for easy creation, yet I changed it into a json to proceed with my original idea of recalling the information from the json file into an in-game tutorial book, if you know those like... history(?) books in maplestory where they tell you backstreet of towns and stuff—thats gonna be recalled from in the lore.json file.
 
-### 🔧 Installation Instructions (Multi-part Download)
-Due to GitHub's file size restrictions, this release is split into separate parts. 
-
-1. **Download all `.part` files** (`part0` through `part5`) into the exact same folder on your computer.
-2. Open **PowerShell** in that folder (Shift + Right-click in the folder -> *Open PowerShell window here* or *Open in Terminal*).
-3. Run the matching command below for your operating system to combine them:
-
-#### For Windows 11 (Fastest):
-```powershell
-cmd /c "copy /b Edinlode 1.0.0-alpha.3.zip.part* Edinlode_Full.zip"
-```
-
-#### For Windows 10:
-```powershell
-Get-Content "Edinlode 1.0.0-alpha.3.zip.part*" -AsByteStream | Set-Content "Edinlode_Full.zip" -AsByteStream
-```
-
-4. Once finished, a new file named **`Edinlode_Full.zip`** will appear. Right-click it and extract it normally to play!
+https://drive.google.com/file/d/1eGyvVY7v0dZGWRhtsijlyFqQwR84Gtk7/view?usp=sharing <- here is the release file; even though there is a release file, as a starting programmer, I failed to create a fully compressed version to fit the max 2GB file upload limit. Therefore, I set a new download ZIP in google drives, so please go find and download from this link to access the program.
